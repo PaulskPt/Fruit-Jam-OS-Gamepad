@@ -46,7 +46,7 @@ CIRCUITPY/
 ├── code.py                         # Fruit Jam OS Launcher (main menu)
 ├── launcher_conf.json              # System & peripheral configuration
 |── launcher.config.py
-├── settings.toml
+├── settings.toml                   # Wi-Fi credentials and other settings
 ├── lib/
 │   ├── fj_gamepad.py               # Shared GamepadManager & SNES button definitions
 │   └── gamepad_bridge.py           # Launcher-to-app gamepad presence handoff
