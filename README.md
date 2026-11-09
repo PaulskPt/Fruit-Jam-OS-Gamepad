@@ -161,6 +161,7 @@ neopixel.mpy
 simpleio.mpy
 ```
 Note: download/install only Adafruit CircuitPython Libraries for CircuitPython V 10.x
+[Link](https://github.com/adafruit/Adafruit_CircuitPython_Bundle/releases), (Recommended) adafruit-circuitpython-bundle-10.x-mpy-20261108.zip
 
 ### Other libraries used:
 
