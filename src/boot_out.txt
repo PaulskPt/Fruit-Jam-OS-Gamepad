@@ -1,0 +1,5 @@
+Adafruit CircuitPython 10.2.1 on 2026-05-13; Adafruit Fruit Jam with rp2350b
+Board ID:adafruit_fruit_jam
+UID:91972890D3A16BD3
+boot.py output:
+[2J[H

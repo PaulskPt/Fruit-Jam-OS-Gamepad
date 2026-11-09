@@ -1,0 +1,26 @@
+{
+  "my_debug": false,
+  "use_gamepad": true,
+  "use_mouse": false,
+  "use_keyboard": false,
+  "use_sound": true,
+  "audio_output": "speaker",
+  "volume": 0.85,
+  "volume_override_danger": 0.9,
+  "screensaver_timeout": 300,
+  "favorites": [
+    "FruitJam_Breakout",
+    "Larsio_Paint_Music",
+    "Fruit_Jam_Audio_Test"
+  ],
+  "palette": {
+    "bg": "0x222222",
+    "fg": "0xFFFFFF",
+    "accent": "0x0088FF",
+    "arrow": "0xAAAAAA"
+  },
+  "screensaver": {
+	"module": "/apps/Screensavers/bouncing_logo_screensaver"
+  },
+  "screensaver.background_color": "0x001122"
+}
