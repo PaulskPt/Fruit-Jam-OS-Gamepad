@@ -117,6 +117,54 @@ Features full SNES gamepad cursor emulation with **220 ms click debouncing**, **
 8. From folder: `/src` copy the files: `boot.py`, `boot_animation.py`, `/code.py`, `launcher_conf.json`, `launcher_config.py`and `settings.toml` onto `CIRCUITPY/`;
 9. Ensure `launcher_conf.json` has `"use_gamepad": true` and `"use_mouse": false` when using a USB SNES type gamepad (prevents `adafruit_usb_host_mouse` from claiming the gamepad's HID report interface). Set `"audio_output"` to `"speaker"` if you want audio output to an external speaker. In that case don't forget to connect a jumper wire between the pins `A1` and `GND` on the 20-pin connector.
 
+### List of libraries used:
+```
+adafruit_bitmap_font
+adafruit_bus_device
+adafruit_button
+adafruit_cursorcontrol
+adafruit_display_shapes
+adafruit_display_text
+adafruit_displayio_layout
+adafruit_esp32spi
+adafruit_fruitjam
+adafruit_haslib
+adafruit_imageload
+adafruit_io
+adafruit_midi
+adafruit_minimqtt
+adafruit_portalbase
+adafruit_progressbar
+adafruit_usb_host_mouse
+adafruit_anchored_group.mpy
+adafruit_anchored_tilegrid.mpy
+adafruit_argv_file.mpy
+adafruit_color_terminal.mpy
+adafruit_connection_manager.mpy
+adafruit_dang.mpy
+adafruit_datetime.mpy
+adafruit_debouncher.mpy
+adafruit_fakerequests.mpy
+adafruit_miniesptool.mpy
+adafruit_miniqr.mpy
+adafruit_ntp.mpy
+adafruit_pathlib.mpy
+adafruit_pixelbuf.mpy
+adafruit_requests.mpy
+adafruit_sdcard.mpy
+adafruit_simplemath.mpy
+adafruit_ticks.mpy
+adafruit_tlv320.mpy
+adafruit_touchscreen.mpy
+adafruit_usb_host_descriptors.mpy
+neopixel.mpy
+simpleio.mpy
+----------------------------------------------
+relic_usb_host_descriptor_parser.py [Link](https://github.com/relic-se/CircuitPython_USB_Host_Descriptor_Parser)
+relic_usb_host_gamepad [Link](https://github.com/relic-se/CircuitPython_USB_Host_Gamepad)
+----------------------------------------------
+fj_gamepad.py (by @PaulskPt and Gemini)
+gamepad_bridge.py  (by @PaulskPt and Gemini)
 ---
 
 ## Credits & License
