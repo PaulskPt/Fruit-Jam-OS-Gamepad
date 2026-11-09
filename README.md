@@ -21,7 +21,7 @@ This repository centralizes USB HID gamepad handling into a shared library (`/li
 
 ## Key Improvements & Architecture
 
-### 1. Centralized Gamepad Driver (`/lib/fj_gamepad.py`)
+### 1. Centralized Gamepad Driver (`[/lib/fj_gamepad.py](https://github.com/PaulskPt/FruitJam-OS-Gamepad/blob/main/src/lib/fj_gamepad.py)`)
 Instead of duplicating raw HID polling loops and button maps in every script, all applications import `GamepadManager` and standardized button tuples from `/lib/fj_gamepad.py`:
 * **Hardware Clone Alignment:** Maps both standard `relic_usb_host_gamepad` constants and physical clone HID button indexes (`HW_UP = 4`, `HW_DOWN = 5`, `HW_LEFT = 6`, `HW_RIGHT = 7`, `HW_START = 8`, `HW_SELECT = 9`, `HW_L1 = 11`, `HW_R1 = 12`).
 * **Clean Button Separation:** Isolates directional D-Pad controls, face buttons (`A`, `B`, `X`, `Y`), shoulder buttons (`L1`, `R1`), `SELECT`, and `START` so face buttons never collide with directional movement.
