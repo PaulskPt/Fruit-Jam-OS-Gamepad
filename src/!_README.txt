@@ -3,15 +3,15 @@
 This is a modified version ot the FruitJam OS,
 in this sense that various files like: /boot.py, launcher_config.py /code.py are changed.
 File /code.py now supports the use of a SNES type gamepad.
-Also /apps/FruitJam_Breakout/code.py has received many changes, to make use of a SNES type gamepad and the file /code.py now has a 
-flag "use_sound" which is set to "False" because the sound via the earphones had an unwanted ticking sound through the other wanted sounds.
+Also /apps/FruitJam_Breakout/code.py has received many changes, to make use of a SNES type gamepad.
 
 In this update the following changes have been made:
 
 to /boot_amimation.py changes to have the script read (better) the file /launcher_config.json,
-so that it "knows" to what peripheral the audio must go: speaker or headphone. I set the /launcher_config.json "audio_output" to "speaker".
+so that it "knows" to what peripheral the audio must go: speaker or headphone. 
+I set the /launcher_config.json "audio_output" to "speaker".
 
-to /apps/Fruit_jan_Audio_Test/code.py I made several changes:
+In file: /apps/Fruit_jan_Audio_Test/code.py I made several changes:
   new functions: ck_stop_button(), to read if button1 is pressed;
                  blink_neopixels(LED_NR: int), that will be called from the main loop when the gamepad START button or the board's button1 
 				 is pressed. 

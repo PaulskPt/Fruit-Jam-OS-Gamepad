@@ -1,6 +1,6 @@
 # FruitJam-OS-Gamepad
 
-A refactored version of **Fruit Jam OS** ("A mini credit card sized computer!") and its bundled applications for the **Adafruit Fruit Jam (RP2350B)** running **CircuitPython 10.2.1**.
+A refactored (not a cloned) version of **Fruit Jam OS** ("A mini credit card sized computer!") and its bundled applications for the **Adafruit Fruit Jam (RP2350B)** running **CircuitPython 10.2.1**.
 
 * **Controller:** [Adafruit USB Game Controller with SNES-like Layout (PID 6285)](https://www.adafruit.com/product/6285) / DragonRise (`081f:e401`) USB SNES-style gamepad connected via the on-board CH334F USB host hub.
 
