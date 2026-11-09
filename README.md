@@ -110,7 +110,7 @@ Features full SNES gamepad cursor emulation with **220 ms click debouncing**, **
 
 1. Flash **CircuitPython 10.2.1** onto your **Adafruit Fruit Jam (RP2350B)**;
 2. Copy the files/folders from folder: `/src/apps` into `CIRCUITPY/apps`;
-3. Copy the files/folders from folder: `/src/boot_animations` into `CIRCUITPY/boot_animations`;
+3. Copy the files/folders from folder: `/src/boot_animation_assets` into `CIRCUITPY/boot_animation_assets`;
 4. Copy the files/folders from folder: `/src/fonts` into `CIRCUITPY/fonts`;
 5. Copy the files/folders from folder: `/src/launcher_assets` into `CIRCUITPY/launcher_assets`;
 7. Copy the files/folders from folder: `/src/lib` (along with the required Adafruit Fruit Jam libraries) into `CIRCUITPY/lib/`;
