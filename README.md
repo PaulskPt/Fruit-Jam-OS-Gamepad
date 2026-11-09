@@ -50,7 +50,7 @@ CIRCUITPY/
 ├── lib/
 │   ├── fj_gamepad.py               # Shared GamepadManager & SNES button definitions
 │   └── gamepad_bridge.py           # Launcher-to-app gamepad presence handoff
-|   |__ more (adafruit) libraries
+|   |__ more (adafruit & relic) libraries
 └── apps/
     ├── FruitJam_Breakout/
     │   └── code.py                 # Breakout arcade game
