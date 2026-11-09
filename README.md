@@ -114,7 +114,7 @@ Features full SNES gamepad cursor emulation with **220 ms click debouncing**, **
 4. Copy the files/folders from folder: `/src/fonts` into `CIRCUITPY/fonts`;
 5. Copy the files/folders from folder: `/src/launcher_assets` into `CIRCUITPY/launcher_assets`;
 7. Copy the files/folders from folder: `/src/lib` (along with the required Adafruit libraries - see list below) into `CIRCUITPY/lib/`;
-8. From folder: `/src` copy the files: `boot.py`, `boot_animation.py`, `/code.py`, `launcher_conf.json`, `launcher_config.py`and `settings.toml` onto `CIRCUITPY/`;
+8. From folder: `/src` copy the files: `boot.py`, `boot_animation.py`, `code.py`, `launcher_conf.json`, `launcher_config.py`and `settings.toml` onto `CIRCUITPY/`;
 9. Ensure `launcher_conf.json` has `"use_gamepad": true` and `"use_mouse": false` when using a USB SNES type gamepad (prevents `adafruit_usb_host_mouse` from claiming the gamepad's HID report interface). Set `"audio_output"` to `"speaker"` if you want audio output to an external speaker. In that case don't forget to connect a jumper wire between the pins `A1` and `GND` on the 20-pin connector.
 
 ### List of Adafruit CircuitPython libraries used
