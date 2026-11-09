@@ -41,11 +41,16 @@ Instead of duplicating raw HID polling loops and button maps in every script, al
 
 ```text
 CIRCUITPY/
+├── boot.py
+├── boot_animation.py
 ├── code.py                         # Fruit Jam OS Launcher (main menu)
 ├── launcher_conf.json              # System & peripheral configuration
+|── launcher.config.py
+├── settings.toml
 ├── lib/
 │   ├── fj_gamepad.py               # Shared GamepadManager & SNES button definitions
 │   └── gamepad_bridge.py           # Launcher-to-app gamepad presence handoff
+|   |__ more (adafruit) libraries
 └── apps/
     ├── FruitJam_Breakout/
     │   └── code.py                 # Breakout arcade game
