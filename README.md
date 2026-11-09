@@ -118,5 +118,5 @@ Features full SNES gamepad cursor emulation with **220 ms click debouncing**, **
 ## Credits & License
 
 * Original **Fruit Jam OS** and **Larsio Paint Music** by Tim Cocks, John Park, and Adafruit Industries.
-* Gamepad architecture refactoring, hardware clone alignment, soft-reload transitions, and Larsio Paint Music gamepad integration by **Paulus Schulinck ([@PaulskPt](https://github.com))** with assistance from **Gemini**.
+* Gamepad architecture refactoring, hardware clone alignment, soft-reload transitions, and Larsio Paint Music gamepad integration by **Paulus Schulinck ([@PaulskPt](https://github.com))** with assistance from **Gemini** (Google AI).
 * Licensed under the **MIT License**.
