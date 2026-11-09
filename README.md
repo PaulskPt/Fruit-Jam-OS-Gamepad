@@ -113,11 +113,11 @@ Features full SNES gamepad cursor emulation with **220 ms click debouncing**, **
 3. Copy the files/folders from folder: `/src/boot_animation_assets` into `CIRCUITPY/boot_animation_assets`;
 4. Copy the files/folders from folder: `/src/fonts` into `CIRCUITPY/fonts`;
 5. Copy the files/folders from folder: `/src/launcher_assets` into `CIRCUITPY/launcher_assets`;
-7. Copy the files/folders from folder: `/src/lib` (along with the required Adafruit libraries) into `CIRCUITPY/lib/`;
+7. Copy the files/folders from folder: `/src/lib` (along with the required Adafruit libraries - see list below) into `CIRCUITPY/lib/`;
 8. From folder: `/src` copy the files: `boot.py`, `boot_animation.py`, `/code.py`, `launcher_conf.json`, `launcher_config.py`and `settings.toml` onto `CIRCUITPY/`;
 9. Ensure `launcher_conf.json` has `"use_gamepad": true` and `"use_mouse": false` when using a USB SNES type gamepad (prevents `adafruit_usb_host_mouse` from claiming the gamepad's HID report interface). Set `"audio_output"` to `"speaker"` if you want audio output to an external speaker. In that case don't forget to connect a jumper wire between the pins `A1` and `GND` on the 20-pin connector.
 
-### List of libraries used:
+### List of Adafruit CircuitPython libraries used
 ```
 adafruit_bitmap_font
 adafruit_bus_device
@@ -159,13 +159,20 @@ adafruit_touchscreen.mpy
 adafruit_usb_host_descriptors.mpy
 neopixel.mpy
 simpleio.mpy
-----------------------------------------------
-relic_usb_host_descriptor_parser.py [Link](https://github.com/relic-se/CircuitPython_USB_Host_Descriptor_Parser)
-relic_usb_host_gamepad [Link](https://github.com/relic-se/CircuitPython_USB_Host_Gamepad)
-----------------------------------------------
-fj_gamepad.py (by @PaulskPt and Gemini)
-gamepad_bridge.py  (by @PaulskPt and Gemini)
----
+```
+Note: download/install only Adafruit CircuitPython Libraries for CircuitPython V 10.x
+
+### Other libraries used:
+
+`relic_usb_host_descriptor_parser.py` [Link](https://github.com/relic-se/CircuitPython_USB_Host_Descriptor_Parser)
+
+`relic_usb_host_gamepad`  [Link](https://github.com/relic-se/CircuitPython_USB_Host_Gamepad)
+
+### Modules by @PaulskPt and Gemini, included in this repo
+
+`fj_gamepad.py`
+
+`gamepad_bridge.py`
 
 ## Credits & License
 
