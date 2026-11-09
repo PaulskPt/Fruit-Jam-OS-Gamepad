@@ -108,10 +108,14 @@ Features full SNES gamepad cursor emulation with **220 ms click debouncing**, **
 
 ## Installation
 
-1. Flash **CircuitPython 10.2.1** onto your **Adafruit Fruit Jam (RP2350B)**.
-2. Copy `/lib/fj_gamepad.py` and `/lib/gamepad_bridge.py` (along with the required Adafruit Fruit Jam libraries) into `CIRCUITPY/lib/`.
-3. Copy `/code.py` and the refactored `/apps/` folders onto `CIRCUITPY/`.
-4. Ensure `launcher_conf.json` has `"use_gamepad": true` and `"use_mouse": false` when using a USB SNES gamepad (prevents `adafruit_usb_host_mouse` from claiming the gamepad's HID report interface). Set "audio_output" to "speaker" if you want audio output to an external speaker. In that case don't forget to connect a jumper wire between the pins A1 and GND on the 20-pin connector.
+1. Flash **CircuitPython 10.2.1** onto your **Adafruit Fruit Jam (RP2350B)**;
+2. Copy the files/folders from folder: `/src/apps` into `CIRCUITPY/apps`;
+3. Copy the files/folders from folder: `/src/boot_animations` into `CIRCUITPY/boot_animations`;
+4. Copy the files/folders from folder: `/src/fonts` into `CIRCUITPY/fonts`;
+5. Copy the files/folders from folder: `/src/launcher_assets` into `CIRCUITPY/launcher_assets`;
+7. Copy the files/folders from folder: `/src/lib` (along with the required Adafruit Fruit Jam libraries) into `CIRCUITPY/lib/`;
+8. From folder: `/src` copy the files: `boot.py`, `boot_animation.py`, `/code.py`, `launcher_conf.json`, `launcher_config.py`and `settings.toml` onto `CIRCUITPY/`;
+9. Ensure `launcher_conf.json` has `"use_gamepad": true` and `"use_mouse": false` when using a USB SNES gamepad (prevents `adafruit_usb_host_mouse` from claiming the gamepad's HID report interface). Set "audio_output" to "speaker" if you want audio output to an external speaker. In that case don't forget to connect a jumper wire between the pins A1 and GND on the 20-pin connector.
 
 ---
 
