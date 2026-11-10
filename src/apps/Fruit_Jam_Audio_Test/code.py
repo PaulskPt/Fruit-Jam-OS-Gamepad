@@ -37,7 +37,7 @@ note_envelope = synthio.Envelope(
 )
 
 path_name = "F:/CIRCUITPY/apps/"
-game_name = "Fruitjam_Audio_Test"
+game_name = "Fruit-Jam_Audio_Test"
 fn = "code.py"
 
 launcher_config = LauncherConfig()
