@@ -135,7 +135,7 @@ and `CIRCUITPY_Lib_relic_usb_host_gamepad` [Image](https://github.com/PaulskPt/F
 
 Note: download/install only Adafruit CircuitPython Libraries for CircuitPython V 10.x
 
-[Link](https://github.com/adafruit/Adafruit_CircuitPython_Bundle/releases), (Recommended) adafruit-circuitpython-bundle-10.x-mpy-20261108.zip
+(Recommended) adafruit-circuitpython-bundle-10.x-mpy-20261108.zip, [Link](https://github.com/adafruit/Adafruit_CircuitPython_Bundle/releases)
 
 ### Other libraries used:
 
