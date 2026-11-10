@@ -2,10 +2,6 @@
 
 A refactored (not a cloned) version of **Fruit Jam OS** ("A mini credit card sized computer!") and its bundled applications for the **Adafruit Fruit Jam (RP2350B)** running **CircuitPython 10.2.1**.
 
-* **Board:** [Adafruit Fruit Jam Mini RP2350 Computer](https://www.adafruit.com/product/6200)
-* **Controller:** [Adafruit USB Game Controller with SNES-like Layout (PID 6285)](https://www.adafruit.com/product/6285) / DragonRise (`081f:e401`) USB SNES-style gamepad connected via the on-board CH334F USB host hub.
-
-
 This repository centralizes USB HID gamepad handling into a shared library (`/lib/fj_gamepad.py`), resolves USB host contention and hard-reset issues during app transitions, and adds full SNES-style controller support across the desktop launcher and apps—including mouse-emulated cursor control for **Larsio Paint Music**.
 
 ---
@@ -16,7 +12,7 @@ This repository centralizes USB HID gamepad handling into a shared library (`/li
 * **Firmware:** CircuitPython `10.2.1` (`2026-05-13; Adafruit Fruit Jam with rp2350b`)
   > **Note:** Tested specifically on CircuitPython `10.2.1` to prevent memory and display framebuffer allocation errors during display resolution transitions (`720x400` ↔ `320x240`). See: CircuitPython version of: 2026-05-13T00:04:55.000Z, 1.7 MB, [adafruit-circuitpython-adafruit_fruit_jam-en_US-10.2.1.uf2](https://adafruit-circuit-python.s3.amazonaws.com/index.html?prefix=bin/adafruit_fruit_jam/en_US/)
 * **Controller:** USB SNES-style gamepad (tested with DragonRise / `081f:e401` USB SNES clone controllers via the on-board CH334F USB hub);
-* **External speaker** [Adafruit Mini Oval Speaker](https://www.adafruit.com/product/3923), 8 Ohm 1 Watt (currently out of stock. or [Pimoroni UK](https://shop.pimoroni.com/en-eu/products/mini-oval-speaker-8-ohm-1-watt?variant=31150555267155)
+* **External speaker** [Adafruit Mini Oval Speaker](https://www.adafruit.com/product/3923), 8 Ohm 1 Watt (currently out of stock) or [Pimoroni UK](https://shop.pimoroni.com/en-eu/products/mini-oval-speaker-8-ohm-1-watt?variant=31150555267155)
 
 ---
 
