@@ -47,7 +47,7 @@ audio_output_fm_config = None
 k_lbl = None
 
 path_name = "F:/CIRCUITPY/apps/"
-game_name = "Fruitjam_Breakout"
+game_name = "Fruit_Jam_Breakout"
 fn = "code.py"
 
 # Input state
