@@ -61,6 +61,11 @@ CIRCUITPY/
         ├── input_handler.py        # SNES gamepad cursor emulation, debounce & shortcuts
         ├── ui_manager.py           # UI loop, undo last note & BPM adjustment hooks
         └── sound_manager.py        # Resilient WAV sample loader & speaker routing
+    └── Metro_RP2350_Snake/
+        └──  code.py                # App entry point & soft-reload teardown
+        └──  snake_helpers.py
+        └──  snake_splash.bmp
+        └──  snake_spritesheet.bmp
 ```
 
 ---
@@ -103,6 +108,15 @@ Features full SNES gamepad cursor emulation with **220 ms click debouncing**, **
 | **X** | Undo / Delete the most recently placed note |
 | **Y** | Cycle through all 6 instruments (Lars, Heart, Drum, Meatball, Star, Bot) |
 | **START** | Exit application and return to launcher |
+
+### Snake  (`/apps/Metro_RP2350_Snake/`)
+| Button | Action |
+| :--- | :--- |
+| **D-Pad** | Move Snake |
+| **START** | Pause / Resume |
+| **A / START** | Start / Play again |
+| **B / SELECT** | Quit to launcher |
+
 
 ---
 
