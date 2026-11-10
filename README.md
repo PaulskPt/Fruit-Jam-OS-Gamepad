@@ -70,7 +70,7 @@ CIRCUITPY/
 
 ## SNES Gamepad Controls Reference
 
-### Fruit Jam OS Launcher (`/code.py`)
+### Fruit-Jam-OS Launcher (`/code.py`)
 
 | Button | Action |
 | :--- | :--- |
@@ -79,7 +79,7 @@ CIRCUITPY/
 | **A** | Launch selected application |
 | **X** | Open selected application in code editor |
 
-### FruitJam Breakout (`/apps/FruitJam_Breakout/code.py`)
+### Fruit Jam Breakout (`/apps/Fruit_Jam_Breakout/code.py`)
 
 | Button | Action |
 | :--- | :--- |
