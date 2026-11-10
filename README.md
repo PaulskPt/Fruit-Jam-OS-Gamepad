@@ -1,6 +1,6 @@
 # Fruit-Jam-OS-Gamepad
 
-A refactored (not a cloned) version of **Fruit Jam OS** ("A mini credit card sized computer!") and its bundled applications for the **Adafruit Fruit Jam (RP2350B)** running **CircuitPython 10.2.1**.
+A refactored (not a cloned) version of **Fruit-Jam-OS** ("A mini credit card sized computer!") and its bundled applications for the **Adafruit Fruit Jam (RP2350B)** running **CircuitPython 10.2.1**.
 
 This repository centralizes USB HID gamepad handling into a shared library (`/lib/fj_gamepad.py`), resolves USB host contention and hard-reset issues during app transitions, and adds full SNES-style controller support across the desktop launcher and apps—including mouse-emulated cursor control for **Larsio Paint Music**.
 
