@@ -15,7 +15,8 @@ This repository centralizes USB HID gamepad handling into a shared library (`/li
 * **Board:** Adafruit Fruit Jam (RP2350B)
 * **Firmware:** CircuitPython `10.2.1` (`2026-05-13; Adafruit Fruit Jam with rp2350b`)
   > **Note:** Tested specifically on CircuitPython `10.2.1` to prevent memory and display framebuffer allocation errors during display resolution transitions (`720x400` ↔ `320x240`). See: CircuitPython version of: 2026-05-13T00:04:55.000Z, 1.7 MB, [adafruit-circuitpython-adafruit_fruit_jam-en_US-10.2.1.uf2](https://adafruit-circuit-python.s3.amazonaws.com/index.html?prefix=bin/adafruit_fruit_jam/en_US/)
-* **Controller:** USB SNES-style gamepad (tested with DragonRise / `081f:e401` USB SNES clone controllers via the on-board CH334F USB hub)
+* **Controller:** USB SNES-style gamepad (tested with DragonRise / `081f:e401` USB SNES clone controllers via the on-board CH334F USB hub);
+* **External speaker** [Adafruit Mini Oval Speaker](https://www.adafruit.com/product/3923), 8 Ohm 1 Watt (currently out of stock. or [Pimoroni UK](https://shop.pimoroni.com/en-eu/products/mini-oval-speaker-8-ohm-1-watt?variant=31150555267155)
 
 ---
 
