@@ -59,10 +59,11 @@ CIRCUITPY/
     │   ├── ui_manager.py           # UI loop, undo last note & BPM adjustment hooks
     │   └── sound_manager.py        # Resilient WAV sample loader & speaker routing
     └── Metro_RP2350_Snake/
-        └──  code.py                # App entry point & soft-reload teardown
-        └──  snake_helpers.py
-        └──  snake_splash.bmp
-        └──  snake_spritesheet.bmp
+    │   └──  code.py                # App entry point & soft-reload teardown
+    │   └──  snake_helpers.py
+    │   └──  snake_splash.bmp
+    │   └──  snake_spritesheet.bmp
+    └── Screensavers
 ```
 
 ---
