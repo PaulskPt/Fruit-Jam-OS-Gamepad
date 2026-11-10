@@ -43,8 +43,8 @@ from fj_gamepad import (
 )
 
 # D-pad Left/Right for grid navigation (keeps L1/R1 free for page flipping)
-MENU_LEFT = (HW_LEFT, 1)
-MENU_RIGHT = (HW_RIGHT, 0)
+MENU_LEFT = (HW_LEFT,) # Was: (HW_LEFT, 1)
+MENU_RIGHT = (HW_RIGHT,) # Was: (HW_RIGHT, 0)
 
 # Erase console history and home cursor
 sys.stdout.write("\x1b[2J\x1b[H")

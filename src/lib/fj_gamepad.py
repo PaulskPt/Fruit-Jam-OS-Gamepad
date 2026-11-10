@@ -39,14 +39,12 @@ RIGHT_BUTTONS = (
 
 UP_BUTTONS = (
     HW_UP,
-    2,
     relic_usb_host_gamepad.BUTTON_UP,
     relic_usb_host_gamepad.BUTTON_JOYSTICK_UP,
 )
 
 DOWN_BUTTONS = (
     HW_DOWN,
-    3,
     relic_usb_host_gamepad.BUTTON_DOWN,
     relic_usb_host_gamepad.BUTTON_JOYSTICK_DOWN,
 )
@@ -64,18 +62,22 @@ START_BUTTONS = (
 # Face buttons (cleanly separated from directional controls)
 # see app: Larsio's Paint Music
 A_BUTTONS = (
+    0,
     relic_usb_host_gamepad.BUTTON_A,
 )
 
 B_BUTTONS = (
+    1,
     relic_usb_host_gamepad.BUTTON_B,
 )
 
 X_BUTTONS = (
+    2,
     relic_usb_host_gamepad.BUTTON_X,
 )
 
 Y_BUTTONS = (
+    3,
     relic_usb_host_gamepad.BUTTON_Y,
 )
 
@@ -89,8 +91,8 @@ SHOULDER_RIGHT_BUTTONS = (12,)
 
 
 DEFAULT_GAMEPAD_MAP = {
-    0: "\x1b[C",
-    1: "\x1b[D",
+    0: "\n", # was: "\x1b[C",
+    1: "\x1b", # was: "\x1b[D",
     HW_LEFT: "\x1b[D",
     HW_RIGHT: "\x1b[C",
     HW_START: "\n",
