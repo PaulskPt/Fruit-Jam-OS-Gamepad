@@ -57,10 +57,10 @@ CIRCUITPY/
     ├── Fruit_Jam_Audio_Test/
     │   └── code.py                 # TLV320 DAC sine-wave & arpeggio test utility
     └── Larsio_Paint_Music/
-        ├── code.py                 # App entry point & soft-reload teardown
-        ├── input_handler.py        # SNES gamepad cursor emulation, debounce & shortcuts
-        ├── ui_manager.py           # UI loop, undo last note & BPM adjustment hooks
-        └── sound_manager.py        # Resilient WAV sample loader & speaker routing
+    │   ├── code.py                 # App entry point & soft-reload teardown
+    │   ├── input_handler.py        # SNES gamepad cursor emulation, debounce & shortcuts
+    │   ├── ui_manager.py           # UI loop, undo last note & BPM adjustment hooks
+    │   └── sound_manager.py        # Resilient WAV sample loader & speaker routing
     └── Metro_RP2350_Snake/
         └──  code.py                # App entry point & soft-reload teardown
         └──  snake_helpers.py
