@@ -152,5 +152,5 @@ Note: download/install only Adafruit CircuitPython Libraries for CircuitPython V
 ## Credits & License
 
 * Original **Fruit Jam OS** and **Larsio Paint Music** by Tim Cocks, John Park, and Adafruit Industries [Link](https://github.com/adafruit/Fruit-Jam-OS).
-* Gamepad architecture refactoring, hardware clone alignment, soft-reload transitions, and Larsio Paint Music gamepad integration by **Paulus Schulinck ([@PaulskPt](https://github.com))** with assistance from **Gemini** (Google AI).
+* Gamepad architecture refactoring, hardware clone alignment, soft-reload transitions, Larsio Paint Music and other apps gamepad integration by **Paulus Schulinck ([@PaulskPt](https://github.com))** with assistance from **Gemini** (Google AI).
 * Licensed under the **MIT License**.
