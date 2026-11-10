@@ -57,7 +57,7 @@ key_space_pressed = False
 key_space_released = True
 any_key = False
 
-displayio.release_displays()
+# displayio.release_displays()
 
 launcher_config = LauncherConfig()
 
@@ -125,15 +125,22 @@ if use_sound:
     fruitjam.dac.speaker_gain = 18
 
 
+_tone_cache = {}
+
+def _get_tone_sample(frequency, volume=0.5):
+    freq_int = int(frequency)
+    if freq_int not in _tone_cache:
+        sample_rate = fruitjam.dac.sample_rate
+        length = sample_rate // freq_int
+        sine_wave = array.array("h", [0] * length)
+        for i in range(length):
+            sine_wave[i] = int((math.sin(math.pi * 2 * i / length)) * volume * (2**15 - 1))
+        _tone_cache[freq_int] = audiocore.RawSample(sine_wave, sample_rate=sample_rate)
+    return _tone_cache[freq_int]
+
+
 def play_tone(frequency, duration, volume=0.5):
-    if not use_sound:
-        return
-    sample_rate = fruitjam.dac.sample_rate
-    length = sample_rate // int(frequency)
-    sine_wave = array.array("h", [0] * length)
-    for i in range(length):
-        sine_wave[i] = int((math.sin(math.pi * 2 * i / length)) * volume * (2**15 - 1))
-    sine_wave_sample = audiocore.RawSample(sine_wave, sample_rate=sample_rate)
+    sine_wave_sample = _get_tone_sample(frequency, volume)
     fruitjam.audio.play(sine_wave_sample, loop=True)
     time.sleep(duration)
     fruitjam.audio.stop()
@@ -196,6 +203,13 @@ if my_debug:
     print("Breakout: Initializing matched 320x240 display architecture...")
 request_display_config(320, 240)
 display = supervisor.runtime.display
+display.auto_refresh = False
+
+
+if use_sound:
+    """ pre-warm the audio cache: """
+    for _freq in (196, 210, 220, 240, 270, 300, 330, 440, 554, 587, 659, 660):
+        _get_tone_sample(_freq)
 
 # Game constants
 PADDLE_WIDTH = 40
@@ -347,6 +361,8 @@ def create_game_elements():
     controls_label,
 ) = create_game_elements()
 display.root_group = main_group
+display.refresh()
+gc.collect()
 
 score = 0
 lives = 3
@@ -421,18 +437,6 @@ def run_breakout_game():
                 if raw_events:
                     last_interaction_time = current_time
                     start_time = current_time
-
-                    # Handle Menu Click-Through Bypass
-                    if lStart:
-                        for btn, _ in raw_events:
-                            if btn in (HW_START, HW_SELECT):
-                                if my_debug:
-                                    print(f"Gamepad button {btn} bypassed to prevent menu click-through.")
-                                lStart = False
-                                pad.flush()
-                                if btn == HW_SELECT:
-                                    print("Breakout game started!")
-                                break
 
                 # Query clean button states from GamepadManager
                 key_left_pressed = pad.is_any_held(LEFT_BUTTONS)
@@ -528,6 +532,7 @@ def run_breakout_game():
                 lives -= 1
                 lives_label.text = f"Lives: {lives}"
                 play_life_lost()
+                gc.collect()
 
                 if lives <= 0:
                     game_active = False
