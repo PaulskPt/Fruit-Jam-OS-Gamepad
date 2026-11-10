@@ -1,4 +1,4 @@
-# FruitJam-OS-Gamepad
+# Fruit-Jam-OS-Gamepad
 
 A refactored (not a cloned) version of **Fruit Jam OS** ("A mini credit card sized computer!") and its bundled applications for the **Adafruit Fruit Jam (RP2350B)** running **CircuitPython 10.2.1**.
 
