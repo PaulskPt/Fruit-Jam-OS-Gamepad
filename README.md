@@ -49,7 +49,7 @@ CIRCUITPY/
 │   └── gamepad_bridge.py           # Launcher-to-app gamepad presence handoff
 |   |__ more (adafruit & relic) libraries
 └── apps/
-    ├── FruitJam_Breakout/
+    ├── Fruit_Jam_Breakout/
     │   └── code.py                 # Breakout arcade game
     ├── Fruit_Jam_Audio_Test/
     │   └── code.py                 # TLV320 DAC sine-wave & arpeggio test utility
