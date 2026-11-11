@@ -112,7 +112,7 @@ Features full SNES gamepad cursor emulation with **220 ms click debouncing**, **
 | **B** | Erase note directly under cursor |
 | **X** | Undo / Delete the most recently placed note |
 | **Y** | Cycle through all 6 instruments (Lars, Heart, Drum, Meatball, Star, Bot) |
-| **START** | Exit application and return to launcher |
+| **START** | Exit to launcher |
 
 ### Chip's Challenge (`/apps/Metro_RP2350_Chips_Challenge/`)
 | Button | Action |
