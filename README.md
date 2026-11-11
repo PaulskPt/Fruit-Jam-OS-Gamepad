@@ -122,6 +122,14 @@ Features full SNES gamepad cursor emulation with **220 ms click debouncing**, **
 | **A / START** | Start / Play again |
 | **B / SELECT** | Exit to launcher |
 
+### Flappy Nyan Cat (`/apps/Metro_RP2350_FlappyNyanCat/`)
+| Button | Action |
+| :--- | :--- |
+| **A / B /Up** | Jump / Start |
+| **X / Y** | Switch trail |
+| **A / START** | Play again (Game Over) |
+| **B / SELECT** | Exit to launcher |
+
 ### Memory (`/apps/Metro_RP2350_Memory/`)
 | Button | Action |
 | :--- | :--- |
@@ -147,14 +155,6 @@ Features full SNES gamepad cursor emulation with **220 ms click debouncing**, **
 | **START** | Pause / Resume |
 | **A / START** | Start / Play again |
 | **B / SELECT** | Exit to launcher |
-
-### Flappy Nyan Cat (`/apps/Metro_RP2350_FlappyNyanCat/`)
-| Button | Action |
-| :--- | :--- |
-| **A / B /Up** | Jump / Start |
-| **X / Y** | Switch trail |
-| **A / START** | Play again (Game Over) |
-| **B / SELECT** | Quit to launcher |
 
 ## Installation
 
