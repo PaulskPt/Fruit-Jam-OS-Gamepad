@@ -58,7 +58,7 @@ if pad.connected:
         ("A / B / Up", "Jump / Start"),
         ("X / Y", "Switch trail"),
         ("A / START", "Play again (Game Over)"),
-        ("B / SELECT", "Quit to launcher"),
+        ("B / SELECT", "Exit to launcher"),
     ))
     pad.wait_for_release(min_drain=0.25, timeout=1.5)
 
