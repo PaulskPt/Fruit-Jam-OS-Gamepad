@@ -62,17 +62,24 @@ CIRCUITPY/
     │   └──  code.py                # App entry point & soft-reload teardown
     │   └──  nyancat_16x12.bmp
     │   └──  scratch_post_sprites.bmp
-    └── Metro_RP2350_Snake/
+    └── Metro_RP2350_Memory/
     │   └──  code.py                # App entry point & soft-reload teardown
-    │   └──  snake_helpers.py
-    │   └──  snake_splash.bmp
-    │   └──  snake_spritesheet.bmp
+    │   └──  btn_exit.bmp
+    │   └──  btn_play_again.bmp
+    │   └──  memory_game_sprites.bmp
+    │   └──  memory_title.bmp
+    │   └──  mouse_cursor.bmp
     └── Metro_RP2350_Minesweeper/
     │   │── bitmaps/
     │   └──  code.py                # App entry point & soft-reload teardown
     │   └──  eventbutton.py
     │   └──  gamelogic.py
     │   └──  menu.py
+    └── Metro_RP2350_Snake/
+    │   └──  code.py                # App entry point & soft-reload teardown
+    │   └──  snake_helpers.py
+    │   └──  snake_splash.bmp
+    │   └──  snake_spritesheet.bmp
     └── Fruit_Jam_PyPaint/
     │   └──  code.py                # App entry point & soft-reload teardown
 
@@ -120,13 +127,14 @@ Features full SNES gamepad cursor emulation with **220 ms click debouncing**, **
 | **Y** | Cycle through all 6 instruments (Lars, Heart, Drum, Meatball, Star, Bot) |
 | **START** | Exit application and return to launcher |
 
-### Snake  (`/apps/Metro_RP2350_Snake/`)
+### Memory (`/apps/Metro_RP2350_Memory/`)
 | Button | Action |
 | :--- | :--- |
-| **D-Pad** | Move Snake |
-| **START** | Pause / Resume |
-| **A / START** | Start / Play again |
-| **B / SELECT** | Quit to launcher |
+| **D-Pad** | Move Cursor |
+| **A / B** | Start / Flip card |
+| **A / START** | Play again (Game Over) |
+| **START / SELECT** | Exit to launcher |
+
 
 ### Minesweeper (`/apps/Metro_RP2350_Minesweeper/`)
 | Button | Action |
@@ -138,6 +146,15 @@ Features full SNES gamepad cursor emulation with **220 ms click debouncing**, **
 | **Y** | Reset game |
 | **L1 / R1** | Change difficulty |
 | **START** | Exit to launcher |
+
+### Snake  (`/apps/Metro_RP2350_Snake/`)
+| Button | Action |
+| :--- | :--- |
+| **D-Pad** | Move Snake |
+| **START** | Pause / Resume |
+| **A / START** | Start / Play again |
+| **B / SELECT** | Exit to launcher |
+
 
 ### PyPaint (`/apps/Fruit_Jam_PyPaint/`)
 | Button | Action |
