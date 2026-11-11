@@ -58,6 +58,28 @@ CIRCUITPY/
     │   └── input_handler.py        # SNES gamepad cursor emulation, debounce & shortcuts
     │   └── ui_manager.py           # UI loop, undo last note & BPM adjustment hooks
     │   └── sound_manager.py        # Resilient WAV sample loader & speaker routing
+    └── Metro_RP2350_Chips_Challenge/
+    │   │── bitmaps/
+    │   │── fontss/
+    │   │── sounds/
+    │   └──  audio.py
+    │   └──  CHIPS.DAT
+    │   └──  code.py                # App entry point & soft-reload teardown
+    │   └──  creature.py
+    │   └──  databuffer.py
+    │   └──  definitions.py
+    │   └──  device.py
+    │   └──  dialog.py
+    │   └──  element.py
+    │   └──  game.py
+    │   └──  gamelogic.py
+    │   └──  keyboard.py
+    │   └──  level.py
+    │   └──  point.py
+    │   └──  savestate.py
+    │   └──  settings.toml
+    │   └──  slip.py
+    └── Metro_RP2350_Snake/
     └── Metro_RP2350_FlappyNyanCat/
     │   └──  code.py                # App entry point & soft-reload teardown
     │   └──  nyancat_16x12.bmp
@@ -82,7 +104,6 @@ CIRCUITPY/
     │   └──  snake_spritesheet.bmp
     └── Fruit_Jam_PyPaint/
     │   └──  code.py                # App entry point & soft-reload teardown
-
     └── Screensavers
 ```
 
