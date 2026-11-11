@@ -40,7 +40,7 @@ Instead of duplicating raw HID polling loops and button maps in every script, al
 CIRCUITPY/
 ├── boot.py
 ├── boot_animation.py
-├── code.py                         # Fruit Jam OS Launcher (main menu)
+├── code.py                         # Fruit-Jam-OS Launcher (main menu)
 ├── launcher_conf.json              # System & peripheral configuration
 |── launcher.config.py
 ├── settings.toml                   # Wi-Fi credentials and other settings
