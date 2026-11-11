@@ -49,14 +49,15 @@ CIRCUITPY/
 │   └── gamepad_bridge.py           # Launcher-to-app gamepad presence handoff
 |   |__ more (adafruit & relic) libraries
 └── apps/
-    └── Fruit_Jam_Breakout/
     └── Fruit_Jam_Audio_Test/
+    └── Fruit_Jam_Breakout/
+    └── Fruit_Jam_PyPaint/
     └── Larsio_Paint_Music/
+    └── Metro_RP2350_Chips_Challenge/
     └── Metro_RP2350_FlappyNyanCat/
     └── Metro_RP2350_Memory/
     └── Metro_RP2350_Minesweeper/
     └── Metro_RP2350_Snake/
-    └── Fruit_Jam_PyPaint/
     └── Screensavers
 ```
 
