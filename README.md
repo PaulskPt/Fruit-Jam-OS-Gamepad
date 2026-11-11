@@ -145,6 +145,14 @@ Features full SNES gamepad cursor emulation with **220 ms click debouncing**, **
 | **L1 / R1** | Prev / Next color |
 | **START** | Exit to launcher |
 
+### Flappy Nyan Cat (`/apps/Metro_RP2350_FlappyNyanCat/`)
+| Button | Action |
+| :--- | :--- |
+| **A / B /Up** | Jump / Start |
+| **X / Y** | Switch trail |
+| **A / START** | Play again (Game Over) |
+| **B / SELECT** | Quit to launcher |
+
 ## Installation
 
 1. Flash **CircuitPython 10.2.1** onto your **Adafruit Fruit Jam (RP2350B)**;
