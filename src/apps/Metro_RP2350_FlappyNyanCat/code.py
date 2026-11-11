@@ -31,19 +31,19 @@ from fj_gamepad import (
 )
 
 # how strong the gravity is
-FALL_SPEED = 1
+FALL_SPEED = 0.35 # Was: 1
 
 # how powerful the jump is
-JUMP_SPEED = 5
+JUMP_SPEED = 2.5 # Was: 5
 
 # maximum gravity speed
-TERMINAL_VELOCITY = 7
+TERMINAL_VELOCITY = 3.5 # Was: 7
 
 # make "close calls" more likely by fudging the collision check
 COLLIDE_FUDGE_FACTOR = 8
 
 # how many scaled pixels wide the trail will be
-TRAIL_LENGTH = 20
+TRAIL_LENGTH = 10 # Wasa: 20
 
 # current score
 score = 0
@@ -296,7 +296,7 @@ def shift_trail():
     for idx in range(len(trail_coords)):
         trail_coords[idx][0] -= 1
 
-
+# Changed by Gemini (Google AI)
 def shift_post(post):
     global score  # pylint: disable=global-statement
     if post.x <= 0:
@@ -305,7 +305,7 @@ def shift_post(post):
         new_post = post_pool.get_post()
         new_post.x = 320 - 16
         return new_post
-    post.x -= min((3 + score // 100), 8)
+    post.x -= min((2 + score // 150), 5)
     return post
 
 
@@ -317,7 +317,7 @@ def exit_to_launcher():
 
 
 display.refresh(target_frames_per_second=30)
-
+cat_y = float(nyan_tg.y) # Line added on advise of Gemini (Google AI)
 playing = False
 JUMP_BTNS = A_BUTTONS + B_BUTTONS + UP_BUTTONS
 TRAIL_BTNS = X_BUTTONS + Y_BUTTONS
@@ -345,6 +345,8 @@ while True:
                 if jump_pressed:
                     cat_speed = -JUMP_SPEED
                     playing = True
+                    if pad.connected:
+                        pad.update()
                     break
 
                 time.sleep(0.01)
@@ -385,7 +387,8 @@ while True:
             swap_trail()
             score += 1
 
-        nyan_tg.y += cat_speed
+        cat_y += cat_speed # Line added on advise of Gemini (Google AI)
+        nyan_tg.y = int(cat_y)
 
         if nyan_tg.y > display.height // 2 or nyan_tg.y < 0:
             raise GameOverException(f"Kitty wandered away.\nScore: {score}")
@@ -408,7 +411,7 @@ while True:
         second_post = shift_post(second_post)
 
         score_lbl.text = str(score)
-        display.refresh(target_frames_per_second=30)
+        display.refresh(target_frames_per_second=22) # was: =30)
 
     except GameOverException as e:
         prompt = (
