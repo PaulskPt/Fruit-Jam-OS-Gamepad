@@ -40,7 +40,7 @@ class KeyboardBuffer:
                 ("B / START", "Pause / Resume"),
                 ("Y", "Restart level"),
                 ("L1 / R1", "Prev / Next level"),
-                ("SELECT", "Quit to launcher"),
+                ("SELECT", "Exit to launcher"),
             ))
             self.pad.wait_for_release(min_drain=0.25, timeout=1.5)
 
