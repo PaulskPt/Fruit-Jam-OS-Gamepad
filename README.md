@@ -114,6 +114,14 @@ Features full SNES gamepad cursor emulation with **220 ms click debouncing**, **
 | **Y** | Cycle through all 6 instruments (Lars, Heart, Drum, Meatball, Star, Bot) |
 | **START** | Exit application and return to launcher |
 
+### Chip's Challenge (`/apps/Metro_RP2350_Chips_Challenge/`)
+| Button | Action |
+| :--- | :--- |
+| **D-Pad** | Move Chip |
+| **START** | Pause / Resume |
+| **A / START** | Start / Play again |
+| **B / SELECT** | Exit to launcher |
+
 ### Memory (`/apps/Metro_RP2350_Memory/`)
 | Button | Action |
 | :--- | :--- |
@@ -121,14 +129,6 @@ Features full SNES gamepad cursor emulation with **220 ms click debouncing**, **
 | **A / B** | Start / Flip card |
 | **A / START** | Play again (Game Over) |
 | **START / SELECT** | Exit to launcher |
-
-### Snake  (`/apps/Metro_RP2350_Chips_Challenge/`)
-| Button | Action |
-| :--- | :--- |
-| **D-Pad** | Move Chip |
-| **START** | Pause / Resume |
-| **A / START** | Start / Play again |
-| **B / SELECT** | Exit to launcher |
 
 ### Minesweeper (`/apps/Metro_RP2350_Minesweeper/`)
 | Button | Action |
