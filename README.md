@@ -78,7 +78,7 @@ CIRCUITPY/
 
 | Button | Action |
 | :--- | :--- |
-| **START** | Fade out audio and return to launcher |
+| **START** | Exit to launcher |
 
 
 ### Fruit Jam Breakout (`/apps/Fruit_Jam_Breakout/code.py`)
