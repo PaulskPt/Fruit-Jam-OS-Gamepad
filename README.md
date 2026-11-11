@@ -69,7 +69,8 @@ CIRCUITPY/
     │   └──  eventbutton.py
     │   └──  gamelogic.py
     │   └──  menu.py
-
+    └── Fruit_Jam_PyPaint/
+    │   └──  code.py                # App entry point & soft-reload teardown
     └── Screensavers
 ```
 
@@ -126,11 +127,22 @@ Features full SNES gamepad cursor emulation with **220 ms click debouncing**, **
 | Button | Action |
 | :--- | :--- |
 | **D-Pad** | Move Cursor |
-| **A** | Reveal / Select menu|
+| **A** | Reveal / Select menu |
 | **B** | Flag / Unflag square |
 | **X** | Chord square |
 | **Y** | Reset game |
 | **L1 / R1** | Change difficulty |
+| **START** | Exit to launcher |
+
+### PyPaint" (`/apps/Fruit_Jam_PyPaint/`)
+| Button | Action |
+| :--- | :--- |
+| **D-Pad** | Move Cursor |
+| **A** | Draw / Pick color |
+| **B** | Flood fill |
+| **X** | Toggle brush size |
+| **Y** | Clear canvas |
+| **L1 / R1** | Prev / Next color |
 | **START** | Exit to launcher |
 
 ## Installation
