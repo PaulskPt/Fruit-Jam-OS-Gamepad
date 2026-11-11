@@ -88,7 +88,7 @@ CIRCUITPY/
 | **D-Pad Left / Right** | Move paddle |
 | **L1 / R1** | Move paddle |
 | **SELECT** | Start game / Launch ball |
-| **START** | Exit game and return to launcher |
+| **START** | Exit to launcher |
 
 ### PyPaint (`/apps/Fruit_Jam_PyPaint/`)
 | Button | Action |
