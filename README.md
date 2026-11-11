@@ -45,7 +45,7 @@ CIRCUITPY/
 |── launcher.config.py
 ├── settings.toml                   # Wi-Fi credentials and other settings
 ├── lib/
-│   ├── fj_gamepad.py               # Shared GamepadManager & SNES button definitions
+│   └── fj_gamepad.py               # Shared GamepadManager & SNES button definitions
 │   └── gamepad_bridge.py           # Launcher-to-app gamepad presence handoff
 |   |__ more (adafruit & relic) libraries
 └── apps/
@@ -54,15 +54,22 @@ CIRCUITPY/
     ├── Fruit_Jam_Audio_Test/
     │   └── code.py                 # TLV320 DAC sine-wave & arpeggio test utility
     └── Larsio_Paint_Music/
-    │   ├── code.py                 # App entry point & soft-reload teardown
-    │   ├── input_handler.py        # SNES gamepad cursor emulation, debounce & shortcuts
-    │   ├── ui_manager.py           # UI loop, undo last note & BPM adjustment hooks
+    │   └── code.py                 # App entry point & soft-reload teardown
+    │   └── input_handler.py        # SNES gamepad cursor emulation, debounce & shortcuts
+    │   └── ui_manager.py           # UI loop, undo last note & BPM adjustment hooks
     │   └── sound_manager.py        # Resilient WAV sample loader & speaker routing
     └── Metro_RP2350_Snake/
     │   └──  code.py                # App entry point & soft-reload teardown
     │   └──  snake_helpers.py
     │   └──  snake_splash.bmp
     │   └──  snake_spritesheet.bmp
+    └── Metro_RP2350_Minesweeper/
+    │   │── bitmaps/
+    │   └──  code.py                # App entry point & soft-reload teardown
+    │   └──  eventbutton.py
+    │   └──  gamelogic.py
+    │   └──  menu.py
+
     └── Screensavers
 ```
 
@@ -115,8 +122,16 @@ Features full SNES gamepad cursor emulation with **220 ms click debouncing**, **
 | **A / START** | Start / Play again |
 | **B / SELECT** | Quit to launcher |
 
-
----
+### Minesweeper" (`/apps/Metro_RP2350_Minesweeper/`)
+| Button | Action |
+| :--- | :--- |
+| **D-Pad** | Move Cursor |
+| **A** | Reveal / Select menu|
+| **B** | Flag / Unflag square |
+| **X** | Chord square |
+| **Y** | Reset game |
+| **L1 / R1** | Change difficulty |
+| **START** | Exit to launcher |
 
 ## Installation
 
