@@ -59,7 +59,7 @@ if pad.connected:
         ("D-Pad", "Move snake"),
         ("Start", "Pause / Resume"),
         ("A / Start", "Start / Play again"),
-        ("B / Select", "Quit to launcher"),
+        ("B / Select", "Exit to launcher"),
     ))
     pad.wait_for_release(min_drain=0.25, timeout=1.5)
 

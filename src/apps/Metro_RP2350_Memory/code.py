@@ -72,7 +72,7 @@ if use_gamepad:
             ("D-Pad", "Move cursor"),
             ("A / B", "Start / Flip card"),
             ("A / START", "Play again (Game Over)"),
-            ("START / SELECT", "Quit to launcher"),
+            ("START / SELECT", "Exit to launcher"),
         ))
         pad.wait_for_release(min_drain=0.25, timeout=1.5)
 
