@@ -52,8 +52,6 @@ CIRCUITPY/
     └── Fruit_Jam_Breakout/
     └── Fruit_Jam_Audio_Test/
     └── Larsio_Paint_Music/
-    └── Metro_RP2350_Chips_Challenge/
-    └── Metro_RP2350_Snake/
     └── Metro_RP2350_FlappyNyanCat/
     └── Metro_RP2350_Memory/
     └── Metro_RP2350_Minesweeper/
