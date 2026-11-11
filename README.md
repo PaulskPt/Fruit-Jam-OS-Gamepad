@@ -123,7 +123,7 @@ Features full SNES gamepad cursor emulation with **220 ms click debouncing**, **
 | **A / START** | Start / Play again |
 | **B / SELECT** | Quit to launcher |
 
-### Minesweeper" (`/apps/Metro_RP2350_Minesweeper/`)
+### Minesweeper (`/apps/Metro_RP2350_Minesweeper/`)
 | Button | Action |
 | :--- | :--- |
 | **D-Pad** | Move Cursor |
@@ -134,7 +134,7 @@ Features full SNES gamepad cursor emulation with **220 ms click debouncing**, **
 | **L1 / R1** | Change difficulty |
 | **START** | Exit to launcher |
 
-### PyPaint" (`/apps/Fruit_Jam_PyPaint/`)
+### PyPaint (`/apps/Fruit_Jam_PyPaint/`)
 | Button | Action |
 | :--- | :--- |
 | **D-Pad** | Move Cursor |
