@@ -74,6 +74,13 @@ CIRCUITPY/
 | **A** | Launch selected application |
 | **X** | Open selected application in code editor |
 
+### Fruit Jam Audio Test (`/apps/Fruit_Jam_Audio_Test/code.py`)
+
+| Button | Action |
+| :--- | :--- |
+| **START** | Fade out audio and return to launcher |
+
+
 ### Fruit Jam Breakout (`/apps/Fruit_Jam_Breakout/code.py`)
 
 | Button | Action |
@@ -83,11 +90,16 @@ CIRCUITPY/
 | **SELECT** | Start game / Launch ball |
 | **START** | Exit game and return to launcher |
 
-### Fruit Jam Audio Test (`/apps/Fruit_Jam_Audio_Test/code.py`)
-
+### PyPaint (`/apps/Fruit_Jam_PyPaint/`)
 | Button | Action |
 | :--- | :--- |
-| **START** | Fade out audio and return to launcher |
+| **D-Pad** | Move Cursor |
+| **A** | Draw / Pick color |
+| **B** | Flood fill |
+| **X** | Toggle brush size |
+| **Y** | Clear canvas |
+| **L1 / R1** | Prev / Next color |
+| **START** | Exit to launcher |
 
 ### Larsio Paint Music (`/apps/Larsio_Paint_Music/`)
 Features full SNES gamepad cursor emulation with **220 ms click debouncing**, **1-pixel precision movement**, **vertical screen wrap-around** (top menu ↔ bottom transport bar), and **graceful missing-WAV fallback**:
@@ -110,17 +122,23 @@ Features full SNES gamepad cursor emulation with **220 ms click debouncing**, **
 | **A / START** | Play again (Game Over) |
 | **START / SELECT** | Exit to launcher |
 
+### Snake  (`/apps/Metro_RP2350_Chips_Challenge/`)
+| Button | Action |
+| :--- | :--- |
+| **D-Pad** | Move Chip |
+| **START** | Pause / Resume |
+| **A / START** | Start / Play again |
+| **B / SELECT** | Exit to launcher |
 
 ### Minesweeper (`/apps/Metro_RP2350_Minesweeper/`)
 | Button | Action |
 | :--- | :--- |
 | **D-Pad** | Move Cursor |
-| **A** | Reveal / Select menu |
-| **B** | Flag / Unflag square |
-| **X** | Chord square |
-| **Y** | Reset game |
-| **L1 / R1** | Change difficulty |
-| **START** | Exit to launcher |
+| **A** | Confirm / OK |
+| **B / START** | Pause / Resume |
+| **Y** | Restart level |
+| **L1 / R1** | Prev / Next level |
+| **SELECT** | Exit to launcher |
 
 ### Snake  (`/apps/Metro_RP2350_Snake/`)
 | Button | Action |
@@ -129,18 +147,6 @@ Features full SNES gamepad cursor emulation with **220 ms click debouncing**, **
 | **START** | Pause / Resume |
 | **A / START** | Start / Play again |
 | **B / SELECT** | Exit to launcher |
-
-
-### PyPaint (`/apps/Fruit_Jam_PyPaint/`)
-| Button | Action |
-| :--- | :--- |
-| **D-Pad** | Move Cursor |
-| **A** | Draw / Pick color |
-| **B** | Flood fill |
-| **X** | Toggle brush size |
-| **Y** | Clear canvas |
-| **L1 / R1** | Prev / Next color |
-| **START** | Exit to launcher |
 
 ### Flappy Nyan Cat (`/apps/Metro_RP2350_FlappyNyanCat/`)
 | Button | Action |
