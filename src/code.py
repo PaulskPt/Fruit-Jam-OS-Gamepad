@@ -173,7 +173,7 @@ if use_gamepad:
 
     pad = GamepadManager(check_bridge=False, debug=my_debug)
     if pad.connected:
-        pad.print_controls("Fruit Jam OS Launcher", (
+        pad.print_controls("Fruit-Jam-OS Launcher", (
             ("D-Pad", "Navigate apps & arrows"),
             ("L1 / R1", "Previous / Next page"),
             ("A", "Launch selected app"),
