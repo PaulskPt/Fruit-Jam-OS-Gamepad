@@ -90,7 +90,7 @@ CIRCUITPY/
 | **SELECT** | Start game / Launch ball |
 | **START** | Exit to launcher |
 
-### PyPaint (`/apps/Fruit_Jam_PyPaint/`)
+### PyPaint (`/apps/Fruit_Jam_PyPaint/code.py`)
 | Button | Action |
 | :--- | :--- |
 | **D-Pad** | Move Cursor |
@@ -101,7 +101,7 @@ CIRCUITPY/
 | **L1 / R1** | Prev / Next color |
 | **START** | Exit to launcher |
 
-### Larsio Paint Music (`/apps/Larsio_Paint_Music/`)
+### Larsio Paint Music (`/apps/Larsio_Paint_Music/code.py`)
 Features full SNES gamepad cursor emulation with **220 ms click debouncing**, **1-pixel precision movement**, **vertical screen wrap-around** (top menu ↔ bottom transport bar), and **graceful missing-WAV fallback**:
 
 | Button | Action |
@@ -114,7 +114,7 @@ Features full SNES gamepad cursor emulation with **220 ms click debouncing**, **
 | **Y** | Cycle through all 6 instruments (Lars, Heart, Drum, Meatball, Star, Bot) |
 | **START** | Exit to launcher |
 
-### Chip's Challenge (`/apps/Metro_RP2350_Chips_Challenge/`)
+### Chip's Challenge (`/apps/Metro_RP2350_Chips_Challenge/code.py`)
 | Button | Action |
 | :--- | :--- |
 | **D-Pad** | Move Chip |
@@ -122,7 +122,7 @@ Features full SNES gamepad cursor emulation with **220 ms click debouncing**, **
 | **A / START** | Start / Play again |
 | **B / SELECT** | Exit to launcher |
 
-### Flappy Nyan Cat (`/apps/Metro_RP2350_FlappyNyanCat/`)
+### Flappy Nyan Cat (`/apps/Metro_RP2350_FlappyNyanCat/code.py`)
 | Button | Action |
 | :--- | :--- |
 | **A / B /Up** | Jump / Start |
@@ -130,7 +130,7 @@ Features full SNES gamepad cursor emulation with **220 ms click debouncing**, **
 | **A / START** | Play again (Game Over) |
 | **B / SELECT** | Exit to launcher |
 
-### Memory (`/apps/Metro_RP2350_Memory/`)
+### Memory (`/apps/Metro_RP2350_Memory/code.py`)
 | Button | Action |
 | :--- | :--- |
 | **D-Pad** | Move Cursor |
@@ -138,7 +138,7 @@ Features full SNES gamepad cursor emulation with **220 ms click debouncing**, **
 | **A / START** | Play again (Game Over) |
 | **START / SELECT** | Exit to launcher |
 
-### Minesweeper (`/apps/Metro_RP2350_Minesweeper/`)
+### Minesweeper (`/apps/Metro_RP2350_Minesweeper/code.py`)
 | Button | Action |
 | :--- | :--- |
 | **D-Pad** | Move Cursor |
@@ -148,7 +148,7 @@ Features full SNES gamepad cursor emulation with **220 ms click debouncing**, **
 | **L1 / R1** | Prev / Next level |
 | **SELECT** | Exit to launcher |
 
-### Snake  (`/apps/Metro_RP2350_Snake/`)
+### Snake  (`/apps/Metro_RP2350_Snake/code.py`)
 | Button | Action |
 | :--- | :--- |
 | **D-Pad** | Move Snake |
