@@ -49,61 +49,16 @@ CIRCUITPY/
 │   └── gamepad_bridge.py           # Launcher-to-app gamepad presence handoff
 |   |__ more (adafruit & relic) libraries
 └── apps/
-    ├── Fruit_Jam_Breakout/
-    │   └── code.py                 # Breakout arcade game
-    ├── Fruit_Jam_Audio_Test/
-    │   └── code.py                 # TLV320 DAC sine-wave & arpeggio test utility
+    └── Fruit_Jam_Breakout/
+    └── Fruit_Jam_Audio_Test/
     └── Larsio_Paint_Music/
-    │   └── code.py                 # App entry point & soft-reload teardown
-    │   └── input_handler.py        # SNES gamepad cursor emulation, debounce & shortcuts
-    │   └── ui_manager.py           # UI loop, undo last note & BPM adjustment hooks
-    │   └── sound_manager.py        # Resilient WAV sample loader & speaker routing
     └── Metro_RP2350_Chips_Challenge/
-    │   │── bitmaps/
-    │   │── fontss/
-    │   │── sounds/
-    │   └──  audio.py
-    │   └──  CHIPS.DAT
-    │   └──  code.py                # App entry point & soft-reload teardown
-    │   └──  creature.py
-    │   └──  databuffer.py
-    │   └──  definitions.py
-    │   └──  device.py
-    │   └──  dialog.py
-    │   └──  element.py
-    │   └──  game.py
-    │   └──  gamelogic.py
-    │   └──  keyboard.py
-    │   └──  level.py
-    │   └──  point.py
-    │   └──  savestate.py
-    │   └──  settings.toml
-    │   └──  slip.py
     └── Metro_RP2350_Snake/
     └── Metro_RP2350_FlappyNyanCat/
-    │   └──  code.py                # App entry point & soft-reload teardown
-    │   └──  nyancat_16x12.bmp
-    │   └──  scratch_post_sprites.bmp
     └── Metro_RP2350_Memory/
-    │   └──  code.py                # App entry point & soft-reload teardown
-    │   └──  btn_exit.bmp
-    │   └──  btn_play_again.bmp
-    │   └──  memory_game_sprites.bmp
-    │   └──  memory_title.bmp
-    │   └──  mouse_cursor.bmp
     └── Metro_RP2350_Minesweeper/
-    │   │── bitmaps/
-    │   └──  code.py                # App entry point & soft-reload teardown
-    │   └──  eventbutton.py
-    │   └──  gamelogic.py
-    │   └──  menu.py
     └── Metro_RP2350_Snake/
-    │   └──  code.py                # App entry point & soft-reload teardown
-    │   └──  snake_helpers.py
-    │   └──  snake_splash.bmp
-    │   └──  snake_spritesheet.bmp
     └── Fruit_Jam_PyPaint/
-    │   └──  code.py                # App entry point & soft-reload teardown
     └── Screensavers
 ```
 
