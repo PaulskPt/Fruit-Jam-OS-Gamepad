@@ -52,6 +52,7 @@ CIRCUITPY/
     └── Fruit_Jam_Audio_Test/
     └── Fruit_Jam_Breakout/
     └── Fruit_Jam_PyPaint/
+    └── Fruit_Jam_Synthio_Test/
     └── Larsio_Paint_Music/
     └── Metro_RP2350_Chips_Challenge/
     └── Metro_RP2350_FlappyNyanCat/
@@ -99,6 +100,12 @@ CIRCUITPY/
 | **X** | Toggle brush size |
 | **Y** | Clear canvas |
 | **L1 / R1** | Prev / Next color |
+| **START** | Exit to launcher |
+
+### PyPaint (`/apps/Fruit_Jam_Synthio_Test/code.py`)
+| Button | Action |
+| :--- | :--- |
+| **L1 / R1** | Dec/Increase notes group index |
 | **START** | Exit to launcher |
 
 ### Larsio Paint Music (`/apps/Larsio_Paint_Music/code.py`)
