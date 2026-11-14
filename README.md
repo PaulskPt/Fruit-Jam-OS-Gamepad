@@ -102,7 +102,7 @@ CIRCUITPY/
 | **L1 / R1** | Prev / Next color |
 | **START** | Exit to launcher |
 
-### PyPaint (`/apps/Fruit_Jam_Synthio_Test/code.py`)
+### Synthio Test (`/apps/Fruit_Jam_Synthio_Test/code.py`)
 | Button | Action |
 | :--- | :--- |
 | **L1 / R1** | Dec/Increase notes group index |
