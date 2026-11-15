@@ -161,7 +161,7 @@ def run_SNES_gamepad_test():
                             elif is_pressed:
                                 if key_num in SECOND_GAMEPAD_MAP:
                                     # if my_debug:
-                                    print(f"is_pressed = {is_pressed}, key_num = {key_num}")
+                                    print(f"key_num = {key_num}, is_pressed = {is_pressed}")
                                     print(f"SECOND_GAMEPAD_MAP[{key_num}] = {SECOND_GAMEPAD_MAP[key_num]}")
                                     handle_key_press(key_num)
                             
