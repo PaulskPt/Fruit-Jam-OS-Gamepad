@@ -167,7 +167,7 @@ Features full SNES gamepad cursor emulation with **220 ms click debouncing**, **
 ### SNES Gamepad Test  (`/apps/SNES_gamepad_test/code.py`)
 | Button | Action |
 | :--- | :--- |
-| **SELECT** | Start / Play again |
+| **SELECT** | Start |
 | **START** | Exit to launcher |
 
 ## Installation
