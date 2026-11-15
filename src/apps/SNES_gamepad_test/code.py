@@ -39,9 +39,15 @@ key: 20, value: '\x1b[C'   Joystick Right           Right
 Press SELECT to begin the test or START to exit.
 Starting the SNES gamepad test.
 key_num = 4, is_pressed = True
-SECOND_GAMEPAD_MAP[4] = ['\x1b[a', 'D-Pad Up', 'Up']
+GAMEPAD_MAP[4] = ['\x1b[a', 'D-Pad Up', 'Up']
+key_num = 5, is_pressed = True
+GAMEPAD_MAP[5] = ['\x1b[b', 'D-Pad Down', 'Down']
+key_num = 2, is_pressed = True
+GAMEPAD_MAP[2] = ['\x1b[X', 'Button X', 'Left']
+key_num = 3, is_pressed = True
+GAMEPAD_MAP[3] = ['\x1b[Y', 'Button Y', 'Right']
 key_num = 8, is_pressed = True
-SECOND_GAMEPAD_MAP[8] = ['\n', 'Button Start', 'Start']
+GAMEPAD_MAP[8] = ['\n', 'Button Start', 'Start']
 START pressed. Exiting test...
 inside atexit callback
 
@@ -104,23 +110,18 @@ if use_gamepad:
 
 
 def handle_key_press(key, map_data):
-    key_found = False
+    # map_data is already the exact list for this button, e.g. ["\x1b[A", "Button A", "Up"]
     if my_debug:
-        print(f"found gamepad event.key_number: {key_num:2d}. "
+        print(f"found gamepad event.key_number: {key:2d}. "
               f"ANSI Escape code: {repr(map_data[0])} = '{map_data[1]}', "
               f"button function: {map_data[2]}")
         
-    if key in map_data.keys():
-        # if my_debug:
-        #     print(f"key {key} found")
-        v = map_data[key]
-        if my_debug:
-            print(f"found gamepad event.key_number: {key:2d}. ANSI Escape code: {repr(v[0])} = \'{v[1]}\', button function: {v[2]}")
-    else:
-        if my_debug:
-            print(f"unhandled key: \"{key}\"")
-        else:
-            pass
+    # Since the main loop already verified the key and passed its data,
+    # you can directly unpack or use the elements of the list safely!
+    v = map_data
+    
+    # If you still want to execute a specific action here, you can use v[0], v[1], or v[2]
+
 
 lStart = True
 Stop = False
