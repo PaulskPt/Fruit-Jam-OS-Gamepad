@@ -157,7 +157,7 @@ def run_SNES_gamepad_test():
                                 if key_num in SELECT_BUTTONS: # = SELECT (or Enter) button
                                     print("Starting the SNES gamepad test.")
                                     lStart = False
-                                    continue  # ignore the "Start" button press from the main menu code.py
+                                    continue  # ignore the "SELECT" button press from the main menu code.py
                             elif is_pressed:
                                 if key_num in SECOND_GAMEPAD_MAP:
                                     # if my_debug:
