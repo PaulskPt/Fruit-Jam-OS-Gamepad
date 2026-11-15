@@ -112,6 +112,21 @@ DEFAULT_GAMEPAD_MAP = {
     relic_usb_host_gamepad.BUTTON_R1: "\x1b[6~",
 }
 
+# Used in SNES_gamepad_test
+SECOND_GAMEPAD_MAP = {
+    relic_usb_host_gamepad.BUTTON_A:      ["\x1b[A",  "Button A",              "Up"],              #  0 = Up
+    relic_usb_host_gamepad.BUTTON_B:      ["\x1b[B",  "Button B",              "Down"],            #  1 = Down
+    relic_usb_host_gamepad.BUTTON_X:      ["\x1b[X",  "Button X",              "Left"],            #  2 = Left
+    relic_usb_host_gamepad.BUTTON_Y:      ["\x1b[Y",  "Button Y",              "Right"],           #  3 = Right
+    relic_usb_host_gamepad.BUTTON_UP:     ["\x1b[a",  "D-Pad Up",              "Up"],              #  4 = D-Pad Up
+    relic_usb_host_gamepad.BUTTON_DOWN:   ["\x1b[b",  "D-Pad Down",            "Down"],            #  5 = D-Pad Down
+    relic_usb_host_gamepad.BUTTON_LEFT:   ["\x1b[d",  "D-Pad Left",            "Left"],            #  6 = D-Pad Left
+    relic_usb_host_gamepad.BUTTON_RIGHT:  ["\x1b[c",  "D-Pad Right",           "Right"],           #  7 = D-Pad Right
+    relic_usb_host_gamepad.BUTTON_START:  ["\n",      "Button Start",          "Start"],           #  8 = Enter
+    relic_usb_host_gamepad.BUTTON_SELECT: ["\x1b[E",  "Button Select",         "Select"],          #  9 = Select
+    relic_usb_host_gamepad.BUTTON_L1:     ["\x1b[5~", "Button Left Shoulder",  "Left Shoulder"],   # 11 = Left Shoulder button = PGUP
+    relic_usb_host_gamepad.BUTTON_R1:     ["\x1b[6~", "Button Right Shoulder", "Right Shoulder"]   # 12 = Right Shoulder button = PGDN
+}
 
 class GamepadManager:
     def __init__(self, key_map=None, check_bridge=True, debug=False):
@@ -143,6 +158,9 @@ class GamepadManager:
             if self.debug:
                 print(f"fj_gamepad: Init failed: {e}")
             self.gamepad = None
+            
+    def class_name(self):
+        return self.__class__.__name__
 
     def update(self):
         """Poll gamepad events. Call once per frame."""
@@ -159,7 +177,7 @@ class GamepadManager:
                     btn = event.key_number
                     raw_events.append((btn, event.pressed))
                     if self.debug:
-                        print(f"RAW CONTROLLER PACKET -> Key Number: {btn} | Pressed State: {event.pressed}")
+                        print(f"{self.__class__.__name__}.update(): RAW CONTROLLER PACKET -> Key Number: {btn} | Pressed State: {event.pressed}")
                     if event.pressed:
                         if btn not in self._pressed:
                             self._just_pressed.add(btn)
@@ -239,3 +257,9 @@ class GamepadManager:
         for btn_label, action in mappings:
             print(f"  {btn_label:<10} : {action}")
         print("-" * (len(app_name) + 31) + "\n")
+        
+    def print_second_map(self):
+        print(f"{self.class_name()}.{SECOND_GAMEPAD_MAP.keys()}")
+        for k,v in SECOND_GAMEPAD_MAP.items():
+            print(f"key: {k:>2}, value: {repr(v[0]):>10} {v[1]:<24} {v[2]}")
+
