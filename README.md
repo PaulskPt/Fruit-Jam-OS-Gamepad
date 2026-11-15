@@ -59,6 +59,7 @@ CIRCUITPY/
     └── Metro_RP2350_Memory/
     └── Metro_RP2350_Minesweeper/
     └── Metro_RP2350_Snake/
+    └── SNES_gamepad_test/
     └── Screensavers
 ```
 
@@ -162,6 +163,12 @@ Features full SNES gamepad cursor emulation with **220 ms click debouncing**, **
 | **START** | Pause / Resume |
 | **A / START** | Start / Play again |
 | **B / SELECT** | Exit to launcher |
+
+### SNES Gamepad Test  (`/apps/SNES_gamepad_test/code.py`)
+| Button | Action |
+| :--- | :--- |
+| **SELECT** | Start |
+| **START** | Exit to launcher |
 
 ## Installation
 
