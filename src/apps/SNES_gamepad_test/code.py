@@ -166,7 +166,7 @@ def run_SNES_gamepad_test():
                                     handle_key_press(key_num)
                             
                             if key_num == 8:
-                                print("START pressed. Exiting test in three seconds")
+                                print("START pressed. Exiting test...")
                                 Stop = True
                                 break # out of for event loop
                         if Stop:
@@ -176,7 +176,7 @@ def run_SNES_gamepad_test():
                     
             time.sleep(0.1)
         except KeyboardInterrupt:
-            print("Ctrl+C pressed. Exiting test in three seconds")
+            print("Ctrl+C pressed. Exiting test...")
             Stop = True
             break
         except Exception as e:
