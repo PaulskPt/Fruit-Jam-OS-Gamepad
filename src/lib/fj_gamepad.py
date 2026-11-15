@@ -89,7 +89,6 @@ SHOULDER_RIGHT_BUTTONS = (12,)
 #    HW_R1,                     #  removed line: relic_usb_host_gamepad.BUTTON_R1,
 #)
 
-
 GAMEPAD_MAP = {
     0:                                            ["\n",      "Button 0",              "Enter"],
     1:                                            ["\x1b",    "Button 1",              "Escape"],
@@ -281,9 +280,10 @@ class GamepadManager:
             
             # If the value is a list (like SECOND_GAMEPAD_MAP)
             if isinstance(v, list):
-                val_str = repr(v[0]) if len(v) > 0 else ""
-                name_str = v[1] if len(v) > 1 else ""
-                action_str = v[2] if len(v) > 2 else ""
+                le = len(v)
+                val_str = repr(v[0]) if le > 0 else ""
+                name_str = v[1] if le > 1 else ""
+                action_str = v[2] if le > 2 else ""
                 print(f"key: {k:>2}, value: {val_str:<10} {name_str:<24} {action_str}")
             
             # If the value is a single raw string (like DEFAULT_GAMEPAD_MAP)
