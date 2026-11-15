@@ -90,43 +90,37 @@ SHOULDER_RIGHT_BUTTONS = (12,)
 #)
 
 
-DEFAULT_GAMEPAD_MAP = {
-    0: "\n", # was: "\x1b[C",
-    1: "\x1b", # was: "\x1b[D",
-    HW_LEFT: "\x1b[D",
-    HW_RIGHT: "\x1b[C",
-    HW_START: "\n",
-    HW_SELECT: "\n",
-    relic_usb_host_gamepad.BUTTON_UP: "\x1b[A",
-    relic_usb_host_gamepad.BUTTON_JOYSTICK_UP: "\x1b[A",
-    relic_usb_host_gamepad.BUTTON_DOWN: "\x1b[B",
-    relic_usb_host_gamepad.BUTTON_JOYSTICK_DOWN: "\x1b[B",
-    relic_usb_host_gamepad.BUTTON_LEFT: "\x1b[D",
-    relic_usb_host_gamepad.BUTTON_JOYSTICK_LEFT: "\x1b[D",
-    relic_usb_host_gamepad.BUTTON_RIGHT: "\x1b[C",
-    relic_usb_host_gamepad.BUTTON_JOYSTICK_RIGHT: "\x1b[C",
-    relic_usb_host_gamepad.BUTTON_A: "\n",
-    relic_usb_host_gamepad.BUTTON_START: "\n",
-    relic_usb_host_gamepad.BUTTON_SELECT: "\n",
-    relic_usb_host_gamepad.BUTTON_L1: "\x1b[5~",
-    relic_usb_host_gamepad.BUTTON_R1: "\x1b[6~",
+GAMEPAD_MAP = {
+    0:                                            ["\n",      "Button 0",              "Enter"],
+    1:                                            ["\x1b",    "Button 1",              "Escape"],
+    HW_LEFT:                                      ["\x1b[D",  "Hardware Left",         "Left"],
+    HW_RIGHT:                                     ["\x1b[C",  "Hardware Right",        "Right"],
+    HW_START:                                     ["\n",      "Hardware Start",        "Start"],
+    HW_SELECT:                                    ["\n",      "Hardware Select",       "Select"],
+    relic_usb_host_gamepad.BUTTON_UP:             ["\x1b[a",  "D-Pad Up",              "Up"],
+    relic_usb_host_gamepad.BUTTON_JOYSTICK_UP:    ["\x1b[A",  "Joystick Up",           "Up"],
+    relic_usb_host_gamepad.BUTTON_DOWN:           ["\x1b[b",  "D-Pad Down",            "Down"],
+    relic_usb_host_gamepad.BUTTON_JOYSTICK_DOWN:  ["\x1b[B",  "Joystick Down",         "Down"],
+    relic_usb_host_gamepad.BUTTON_LEFT:           ["\x1b[d",  "D-Pad Left",            "Left"],
+    relic_usb_host_gamepad.BUTTON_JOYSTICK_LEFT:  ["\x1b[D",  "Joystick Left",         "Left"],
+    relic_usb_host_gamepad.BUTTON_RIGHT:          ["\x1b[c",  "D-Pad Right",           "Right"],
+    relic_usb_host_gamepad.BUTTON_JOYSTICK_RIGHT: ["\x1b[C",  "Joystick Right",        "Right"],
+    relic_usb_host_gamepad.BUTTON_A:              ["\x1b[A",  "Button A",              "Up"],
+    relic_usb_host_gamepad.BUTTON_B:              ["\x1b[B",  "Button B",              "Down"],
+    relic_usb_host_gamepad.BUTTON_X:              ["\x1b[X",  "Button X",              "Left"],
+    relic_usb_host_gamepad.BUTTON_Y:              ["\x1b[Y",  "Button Y",              "Right"],
+    relic_usb_host_gamepad.BUTTON_START:          ["\n",      "Button Start",          "Start"],
+    relic_usb_host_gamepad.BUTTON_SELECT:         ["\x1b[E",  "Button Select",         "Select"],
+    relic_usb_host_gamepad.BUTTON_L1:             ["\x1b[5~", "Button Left Shoulder",  "Left Shoulder"],
+    relic_usb_host_gamepad.BUTTON_R1:             ["\x1b[6~", "Button Right Shoulder", "Right Shoulder"],
 }
 
-# Used in SNES_gamepad_test
-SECOND_GAMEPAD_MAP = {
-    relic_usb_host_gamepad.BUTTON_A:      ["\x1b[A",  "Button A",              "Up"],              #  0 = Up
-    relic_usb_host_gamepad.BUTTON_B:      ["\x1b[B",  "Button B",              "Down"],            #  1 = Down
-    relic_usb_host_gamepad.BUTTON_X:      ["\x1b[X",  "Button X",              "Left"],            #  2 = Left
-    relic_usb_host_gamepad.BUTTON_Y:      ["\x1b[Y",  "Button Y",              "Right"],           #  3 = Right
-    relic_usb_host_gamepad.BUTTON_UP:     ["\x1b[a",  "D-Pad Up",              "Up"],              #  4 = D-Pad Up
-    relic_usb_host_gamepad.BUTTON_DOWN:   ["\x1b[b",  "D-Pad Down",            "Down"],            #  5 = D-Pad Down
-    relic_usb_host_gamepad.BUTTON_LEFT:   ["\x1b[d",  "D-Pad Left",            "Left"],            #  6 = D-Pad Left
-    relic_usb_host_gamepad.BUTTON_RIGHT:  ["\x1b[c",  "D-Pad Right",           "Right"],           #  7 = D-Pad Right
-    relic_usb_host_gamepad.BUTTON_START:  ["\n",      "Button Start",          "Start"],           #  8 = Enter
-    relic_usb_host_gamepad.BUTTON_SELECT: ["\x1b[E",  "Button Select",         "Select"],          #  9 = Select
-    relic_usb_host_gamepad.BUTTON_L1:     ["\x1b[5~", "Button Left Shoulder",  "Left Shoulder"],   # 11 = Left Shoulder button = PGUP
-    relic_usb_host_gamepad.BUTTON_R1:     ["\x1b[6~", "Button Right Shoulder", "Right Shoulder"]   # 12 = Right Shoulder button = PGDN
-}
+# 1. Backwards compatibility for apps importing SECOND_GAMEPAD_MAP
+SECOND_GAMEPAD_MAP = GAMEPAD_MAP
+
+# 2. Backwards compatibility for older apps expecting strings
+# This dynamically maps the old dictionary name to just the string component
+DEFAULT_GAMEPAD_MAP = {key: val[0] for key, val in GAMEPAD_MAP.items()}
 
 class GamepadManager:
     def __init__(self, key_map=None, check_bridge=True, debug=False):
@@ -258,8 +252,42 @@ class GamepadManager:
             print(f"  {btn_label:<10} : {action}")
         print("-" * (len(app_name) + 31) + "\n")
         
-    def print_second_map(self):
-        print(f"{self.class_name()}.{SECOND_GAMEPAD_MAP.keys()}")
-        for k,v in SECOND_GAMEPAD_MAP.items():
-            print(f"key: {k:>2}, value: {repr(v[0]):>10} {v[1]:<24} {v[2]}")
 
+    def print_gamepad_map(self, map_idx: int = 0):
+        txt0 = f"{self.class_name()}.print_gamepad_map(): "
+        
+        if not isinstance(map_idx, int):
+            print(f"{txt0}Error: wrong parameter type. Expected: int. Received: {type(map_idx)}")
+            return
+        
+        # 1. Select the map based on the integer index
+        if map_idx == 0:
+            current_map = DEFAULT_GAMEPAD_MAP
+            print(f"--- {txt0}DEFAULT_GAMEPAD_MAP ---")
+        elif map_idx == 1:
+            current_map = SECOND_GAMEPAD_MAP
+            print(f"--- {txt0}SECOND_GAMEPAD_MAP ---")
+        else:
+            print(f"{txt0}Error: Unknown map index {map_idx}")
+            return
+  
+        # 2. Get and sort the keys using Adafruit's recommended way
+        sorted_keys_list = sorted(list(current_map.keys()))
+        print(f"sorted_keys_list= {sorted_keys_list}")
+        
+        # 3. Iterate through and dynamically handle strings vs lists
+        for k in sorted_keys_list:
+            v = current_map[k]
+            
+            # If the value is a list (like SECOND_GAMEPAD_MAP)
+            if isinstance(v, list):
+                val_str = repr(v[0]) if len(v) > 0 else ""
+                name_str = v[1] if len(v) > 1 else ""
+                action_str = v[2] if len(v) > 2 else ""
+                print(f"key: {k:>2}, value: {val_str:<10} {name_str:<24} {action_str}")
+            
+            # If the value is a single raw string (like DEFAULT_GAMEPAD_MAP)
+            else:
+                print(f"key: {k:>2}, value: {repr(v):<10}")
+        
+        print("-" * 66)

@@ -17,33 +17,32 @@ use_gamepad= True
   START      : Exit to main menu
 ------------------------------------------------
 
-Press SELECT to begin the test.
+--- GamepadManager.print_gamepad_map(): SECOND_GAMEPAD_MAP ---
+sorted_keys_list= [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 17, 18, 19, 20]
+key:  0, value: '\x1b[A'   Button A                 Up
+key:  1, value: '\x1b[B'   Button B                 Down
+key:  2, value: '\x1b[X'   Button X                 Left
+key:  3, value: '\x1b[Y'   Button Y                 Right
+key:  4, value: '\x1b[a'   D-Pad Up                 Up
+key:  5, value: '\x1b[b'   D-Pad Down               Down
+key:  6, value: '\x1b[d'   D-Pad Left               Left
+key:  7, value: '\x1b[c'   D-Pad Right              Right
+key:  8, value: '\n'       Button Start             Start
+key:  9, value: '\x1b[E'   Button Select            Select
+key: 11, value: '\x1b[5~'  Button Left Shoulder     Left Shoulder
+key: 12, value: '\x1b[6~'  Button Right Shoulder    Right Shoulder
+key: 17, value: '\x1b[A'   Joystick Up              Up
+key: 18, value: '\x1b[B'   Joystick Down            Down
+key: 19, value: '\x1b[D'   Joystick Left            Left
+key: 20, value: '\x1b[C'   Joystick Right           Right
+------------------------------------------------------------------
+Press SELECT to begin the test or START to exit.
 Starting the SNES gamepad test.
-is_pressed = True, key_num = 2
-SECOND_GAMEPAD_MAP[2] = ['\x1b[X', 'Button X', 'Left']
-is_pressed = True, key_num = 3
-SECOND_GAMEPAD_MAP[3] = ['\x1b[Y', 'Button Y', 'Right']
-is_pressed = True, key_num = 0
-SECOND_GAMEPAD_MAP[0] = ['\x1b[A', 'Button A', 'Up']
-is_pressed = True, key_num = 1
-SECOND_GAMEPAD_MAP[1] = ['\x1b[B', 'Button B', 'Down']
-is_pressed = True, key_num = 4
+key_num = 4, is_pressed = True
 SECOND_GAMEPAD_MAP[4] = ['\x1b[a', 'D-Pad Up', 'Up']
-is_pressed = True, key_num = 5
-SECOND_GAMEPAD_MAP[5] = ['\x1b[b', 'D-Pad Down', 'Down']
-is_pressed = True, key_num = 6
-SECOND_GAMEPAD_MAP[6] = ['\x1b[d', 'D-Pad Left', 'Left']
-is_pressed = True, key_num = 7
-SECOND_GAMEPAD_MAP[7] = ['\x1b[c', 'D-Pad Right', 'Right']
-is_pressed = True, key_num = 11
-SECOND_GAMEPAD_MAP[11] = ['\x1b[5~', 'Button Left Shoulder', 'Left Shoulder']
-is_pressed = True, key_num = 12
-SECOND_GAMEPAD_MAP[12] = ['\x1b[6~', 'Button Right Shoulder', 'Right Shoulder']
-is_pressed = True, key_num = 9
-SECOND_GAMEPAD_MAP[9] = ['\x1b[E', 'Button Select', 'Select']
-is_pressed = True, key_num = 8
+key_num = 8, is_pressed = True
 SECOND_GAMEPAD_MAP[8] = ['\n', 'Button Start', 'Start']
-START pressed. Exiting test in three seconds
+START pressed. Exiting test...
 inside atexit callback
 
 Code done running.
@@ -59,16 +58,9 @@ import gc
 
 from fj_gamepad import (
     GamepadManager,
-    SECOND_GAMEPAD_MAP,
-    SELECT_BUTTONS,
-    START_BUTTONS)
-#    SHOULDER_LEFT_BUTTONS,
-#    SHOULDER_RIGHT_BUTTONS,
-#    UP_BUTTONS,
-#    DOWN_BUTTONS,
-#    Y_BUTTONS,
-#    X_BUTTONS
-#)
+    GAMEPAD_MAP,        # <-- Swapped SECOND_GAMEPAD_MAP for the new master map
+    START_BUTTONS
+)
 
 my_debug = False
 use_relic = True
@@ -103,21 +95,24 @@ if use_gamepad:
             ("START ", "Exit to main menu"),
         ))
         pad.wait_for_release(min_drain=0.25, timeout=1.5)
-        if my_debug:
-            pad.print_second_map()
+        if not my_debug:
+            pad.print_gamepad_map(1) # SECOND_GAMEPAD_MAP
     else:
         print(f"{game_name}No gamepad connected. Exiting...")
         Stop = True
 
 
-def handle_key_press(key):
+def handle_key_press(key, map_data):
     key_found = False
-    # if my_debug:
-    #     print(f"\nkey = {key}")
-    if key in SECOND_GAMEPAD_MAP.keys():
+    if my_debug:
+        print(f"found gamepad event.key_number: {key_num:2d}. "
+              f"ANSI Escape code: {repr(map_data[0])} = '{map_data[1]}', "
+              f"button function: {map_data[2]}")
+        
+    if key in map_data.keys():
         # if my_debug:
         #     print(f"key {key} found")
-        v = SECOND_GAMEPAD_MAP[key]
+        v = map_data[key]
         if my_debug:
             print(f"found gamepad event.key_number: {key:2d}. ANSI Escape code: {repr(v[0])} = \'{v[1]}\', button function: {v[2]}")
     else:
@@ -129,7 +124,7 @@ def handle_key_press(key):
 lStart = True
 Stop = False
 
-print("Press SELECT to begin the test.")
+print("Press SELECT to begin the test or START to exit.")
 
 def run_SNES_gamepad_test():
     global lStart, Stop
@@ -159,13 +154,14 @@ def run_SNES_gamepad_test():
                                     lStart = False
                                     continue  # ignore the "SELECT" button press from the main menu code.py
                             elif is_pressed:
-                                if key_num in SECOND_GAMEPAD_MAP:
+                                if key_num in GAMEPAD_MAP: # Was: SECOND_GAMEPAD_MAP:
+                                    button_info = GAMEPAD_MAP[key_num] # Look it up exactly once!
                                     # if my_debug:
                                     print(f"key_num = {key_num}, is_pressed = {is_pressed}")
-                                    print(f"SECOND_GAMEPAD_MAP[{key_num}] = {SECOND_GAMEPAD_MAP[key_num]}")
-                                    handle_key_press(key_num)
+                                    print(f"GAMEPAD_MAP[{key_num}] = {button_info}")
+                                    handle_key_press(key_num, button_info)
                             
-                            if key_num == 8:
+                            if key_num in START_BUTTONS:
                                 print("START pressed. Exiting test...")
                                 Stop = True
                                 break # out of for event loop
