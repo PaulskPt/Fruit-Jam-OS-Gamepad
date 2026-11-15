@@ -58,7 +58,8 @@ import gc
 
 from fj_gamepad import (
     GamepadManager,
-    GAMEPAD_MAP,        # <-- Swapped SECOND_GAMEPAD_MAP for the new master map
+    GAMEPAD_MAP,        # <-- Swapped SECOND_GAMEPAD_MAP for the new master map,
+    SELECT_BUTTONS,
     START_BUTTONS
 )
 
