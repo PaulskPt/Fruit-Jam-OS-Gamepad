@@ -150,9 +150,9 @@ def run_SNES_gamepad_test():
                                 print("Raw event tuple:", event) 
                                 # Access elements by index if you know what they are
                                 # e.g., if index 0 is the key number, and index 1 is the state:
-                                print(f"Item 0 (likely key):   {event[0]}")
-                                print(f"Item 1 (likely state): {event[1]}")
-                                print("-" * 20)
+                                # print(f"key_num {key_num}")
+                                # print(f"is_pressd: {is_pressed}")
+                                # print("-" * 20)
                             if lStart:
                                 if key_num in SELECT_BUTTONS: # = SELECT (or Enter) button
                                     print("Starting the SNES gamepad test.")
