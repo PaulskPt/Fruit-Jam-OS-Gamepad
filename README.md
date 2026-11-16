@@ -63,6 +63,38 @@ CIRCUITPY/
     └── Screensavers
 ```
 
+## Installation
+
+1. Flash **CircuitPython 10.2.1** onto your **Adafruit Fruit Jam (RP2350B)**;
+2. Copy the files/folders from folder: `/src/apps` into `CIRCUITPY/apps`;
+3. Copy the files/folders from folder: `/src/boot_animation_assets` into `CIRCUITPY/boot_animation_assets`;
+4. Copy the files/folders from folder: `/src/fonts` into `CIRCUITPY/fonts`;
+5. Copy the files/folders from folder: `/src/launcher_assets` into `CIRCUITPY/launcher_assets`;
+7. Copy the files/folders from folder: `/src/lib` (along with the required Adafruit libraries - see list below) into `CIRCUITPY/lib/`;
+8. From folder: `/src` copy the files: `boot.py`, `boot_animation.py`, `code.py`, `launcher_conf.json`, `launcher_config.py`and `settings.toml` onto `CIRCUITPY/`;
+9. Ensure `launcher_conf.json` has `"use_gamepad": true` and `"use_mouse": false` when using a USB SNES type gamepad (prevents `adafruit_usb_host_mouse` from claiming the gamepad's HID report interface). Set `"audio_output"` to `"speaker"` if you want audio output to an external speaker. In that case don't forget to connect a jumper wire between the pins `A1` and `GND` on the 20-pin connector.
+
+### List of Adafruit CircuitPython libraries used (download & install yourself)
+See `CIRCUITPY_Lib` [Image](https://github.com/PaulskPt/FruitJam-OS-Gamepad/blob/main/Images/CIRCUITPY_Lib.png)
+and `CIRCUITPY_Lib_relic_usb_host_gamepad` [Image](https://github.com/PaulskPt/FruitJam-OS-Gamepad/blob/main/Images/CIRCUITPY_Lib_relic_usb_host_gamepad.png)
+
+
+Note: download/install only Adafruit CircuitPython Libraries for CircuitPython V 10.x
+
+(Recommended) adafruit-circuitpython-bundle-10.x-mpy-20261108.zip, [Link](https://github.com/adafruit/Adafruit_CircuitPython_Bundle/releases)
+
+### Other libraries used:
+
+`relic_usb_host_descriptor_parser.py` [Link](https://github.com/relic-se/CircuitPython_USB_Host_Descriptor_Parser)
+
+`relic_usb_host_gamepad`  [Link](https://github.com/relic-se/CircuitPython_USB_Host_Gamepad)
+
+### Modules by @PaulskPt and Gemini, included in this repo
+
+`fj_gamepad.py`
+
+`gamepad_bridge.py`
+
 ---
 
 ## SNES Gamepad Controls Reference
@@ -170,37 +202,6 @@ Features full SNES gamepad cursor emulation with **220 ms click debouncing**, **
 | **SELECT** | Start |
 | **START** | Exit to launcher |
 
-## Installation
-
-1. Flash **CircuitPython 10.2.1** onto your **Adafruit Fruit Jam (RP2350B)**;
-2. Copy the files/folders from folder: `/src/apps` into `CIRCUITPY/apps`;
-3. Copy the files/folders from folder: `/src/boot_animation_assets` into `CIRCUITPY/boot_animation_assets`;
-4. Copy the files/folders from folder: `/src/fonts` into `CIRCUITPY/fonts`;
-5. Copy the files/folders from folder: `/src/launcher_assets` into `CIRCUITPY/launcher_assets`;
-7. Copy the files/folders from folder: `/src/lib` (along with the required Adafruit libraries - see list below) into `CIRCUITPY/lib/`;
-8. From folder: `/src` copy the files: `boot.py`, `boot_animation.py`, `code.py`, `launcher_conf.json`, `launcher_config.py`and `settings.toml` onto `CIRCUITPY/`;
-9. Ensure `launcher_conf.json` has `"use_gamepad": true` and `"use_mouse": false` when using a USB SNES type gamepad (prevents `adafruit_usb_host_mouse` from claiming the gamepad's HID report interface). Set `"audio_output"` to `"speaker"` if you want audio output to an external speaker. In that case don't forget to connect a jumper wire between the pins `A1` and `GND` on the 20-pin connector.
-
-### List of Adafruit CircuitPython libraries used (download & install yourself)
-See `CIRCUITPY_Lib` [Image](https://github.com/PaulskPt/FruitJam-OS-Gamepad/blob/main/Images/CIRCUITPY_Lib.png)
-and `CIRCUITPY_Lib_relic_usb_host_gamepad` [Image](https://github.com/PaulskPt/FruitJam-OS-Gamepad/blob/main/Images/CIRCUITPY_Lib_relic_usb_host_gamepad.png)
-
-
-Note: download/install only Adafruit CircuitPython Libraries for CircuitPython V 10.x
-
-(Recommended) adafruit-circuitpython-bundle-10.x-mpy-20261108.zip, [Link](https://github.com/adafruit/Adafruit_CircuitPython_Bundle/releases)
-
-### Other libraries used:
-
-`relic_usb_host_descriptor_parser.py` [Link](https://github.com/relic-se/CircuitPython_USB_Host_Descriptor_Parser)
-
-`relic_usb_host_gamepad`  [Link](https://github.com/relic-se/CircuitPython_USB_Host_Gamepad)
-
-### Modules by @PaulskPt and Gemini, included in this repo
-
-`fj_gamepad.py`
-
-`gamepad_bridge.py`
 
 ## Credits & License
 
