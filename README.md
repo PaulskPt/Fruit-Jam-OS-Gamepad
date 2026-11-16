@@ -47,7 +47,7 @@ CIRCUITPY/
 ├── lib/
 │   └── fj_gamepad.py               # Shared GamepadManager & SNES button definitions
 │   └── gamepad_bridge.py           # Launcher-to-app gamepad presence handoff
-|   |__ more (adafruit & relic) libraries
+|   |__ more (adafruit & relic) libraries (not included)
 └── apps/
     └── Fruit_Jam_Audio_Test/
     └── Fruit_Jam_Breakout/
