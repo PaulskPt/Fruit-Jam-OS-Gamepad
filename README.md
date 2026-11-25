@@ -206,7 +206,7 @@ Features full SNES gamepad cursor emulation with **220 ms click debouncing**, **
 This app does not have provisions to use a gamepad.
 It is an extra app that shows the use of the Fruitjam board 
 to receive, decode and display UDP Packets sent by an X-Plane11
-flightsumulator app running on another pc in the local area network.
+flightsimulator app running on another pc in the local area network.
 
 ## Credits & License
 
