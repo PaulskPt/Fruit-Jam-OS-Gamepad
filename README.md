@@ -60,6 +60,7 @@ CIRCUITPY/
     └── Metro_RP2350_Minesweeper/
     └── Metro_RP2350_Snake/
     └── SNES_gamepad_test/
+    └── udp_rx_test
     └── Screensavers
 ```
 
@@ -113,7 +114,6 @@ Note: download/install only Adafruit CircuitPython Libraries for CircuitPython V
 | Button | Action |
 | :--- | :--- |
 | **START** | Exit to launcher |
-
 
 ### Fruit Jam Breakout (`/apps/Fruit_Jam_Breakout/code.py`)
 
@@ -202,6 +202,11 @@ Features full SNES gamepad cursor emulation with **220 ms click debouncing**, **
 | **SELECT** | Start |
 | **START** | Exit to launcher |
 
+### udp_rx_test ('/apps/udp_rx_test/code.py')
+This app does not have provisions to use a gamepad.
+It is an extra app that shows the use of the Fruitjam board 
+to receive, decode and display UDP Packets sent by an X-Plane11
+flightsumulator app running on another pc in the local area network.
 
 ## Credits & License
 
