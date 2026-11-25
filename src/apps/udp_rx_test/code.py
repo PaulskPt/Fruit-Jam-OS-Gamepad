@@ -16,13 +16,13 @@ import time
 import board  # type: ignore
 import busio  # type: ignore
 import displayio  # type: ignore
-from adafruit_display_text import label
+from adafruit_display_text import label # type: ignore
 import terminalio  # type: ignore
 import atexit
 import struct
 from digitalio import DigitalInOut  # type: ignore
-from adafruit_esp32spi import adafruit_esp32spi
-from adafruit_esp32spi import adafruit_esp32spi_socketpool as socketpool
+from adafruit_esp32spi import adafruit_esp32spi # type: ignore
+from adafruit_esp32spi import adafruit_esp32spi_socketpool as socketpool # type: ignore
 from adafruit_fruitjam.peripherals import Peripherals, VALID_DISPLAY_SIZES, request_display_config  # type: ignore
 import neopixel  # type: ignore
 import supervisor  # type: ignore
@@ -31,11 +31,11 @@ import terminalio   # type: ignore
 from adafruit_anchored_group import AnchoredGroup   # type: ignore
 from adafruit_anchored_tilegrid import AnchoredTileGrid   # type: ignore
 from adafruit_argv_file import read_argv, write_argv   # type: ignore
-from adafruit_bitmap_font import bitmap_font
+from adafruit_bitmap_font import bitmap_font # type: ignore
 from adafruit_display_text.bitmap_label import Label   # type: ignore
 from adafruit_display_text.text_box import TextBox   # type: ignore
 from adafruit_displayio_layout.layouts.grid_layout import GridLayout   # type: ignore
-from launcher_config import LauncherConfig
+from launcher_config import LauncherConfig # type: ignore
 
 # --- Configuration & Debug Flags ---
 DEST_PORT = 49000
@@ -47,10 +47,6 @@ Stop = False
 
 show_hex_grid = True
 show_cockpit_telemetry = True
-
-# Update your global index mappings at the top of your file:
-HEX_TITLE    = 0
-HEX_CANVAS   = 1  # The sole container tracking the active view
 
 fruitjam = Peripherals()
 BLINK_ALL_NEOPIXELS = 100
@@ -166,7 +162,6 @@ scaled_group.append(telemetry_group)
 
 hex_grid_group = displayio.Group()
 scaled_group.append(hex_grid_group)
-
 
 # Telemetry Group Index Mappings
 TLM_TITLE = 0
