@@ -69,7 +69,7 @@ app = {} # Create an empty dict
 #  Invalid display size. Must be one of: {(360, 200), (720, 400), (320, 240), (640, 480)}
 try:
     if VALID_DISPLAY_SIZES is not None:
-        print(f"Global: VALID_DISPLAY_SIZES = {VALID_DISPLAY_SIZES}")
+        print(f"global: VALID_DISPLAY_SIZES = {VALID_DISPLAY_SIZES}")
     else:
         VALID_DISPLAY_SIZES = {(360, 200), (720, 400), (320, 240), (640, 480)}
 except NameError:
@@ -87,6 +87,7 @@ if (width_config := os.getenv("CIRCUITPY_DISPLAY_WIDTH")) is not None:
 else:
     display_size = (720, 400)
 
+print(f"global: display_size= {display_size}")
 request_display_config(*display_size)
 display = supervisor.runtime.display
 
@@ -112,16 +113,16 @@ grps_dict_rev = { "udp_rx_group": 0,
 }
 
 telemetry_dict = {  0: "HEAD",
-                    3: "SPEEDS",
-                   17: "POS&ALT",
-                   20: "ATTITUDE",
+                    3: "Speeds",
+                   17: "Pos & Alt",
+                   20: "Pitch, Roll & Hdg",
                    96: "COMs",
                    97: "NAVs",
                   102: "DME"}
 
 scale = 1
 if display.width > 360:
-    scale = 2
+    scale = 1  # was: 2 -- When scale = 1 then fill_hex_grid is more complete, however the text font is smaller
 
 font_file = "/fonts/terminal.lvfontbin"
 font = bitmap_font.load_font(font_file)
@@ -590,7 +591,7 @@ def fill_telemetry(data_rcvd):
             print(TAG+f"active_id= {active_id:>3d} {aid_txt}")
 
         if active_id in [17, 20]:
-            degs_ch = "* " # instead of '°'
+            degs_ch = "*" # instead of '°'
         else:
             degs_ch = ""
 
@@ -609,7 +610,7 @@ def fill_telemetry(data_rcvd):
                 EW = "E"
             else:
                 EW = "W"
-            telemetry_group[TLM_POSALT].text = f"  Pos: {floats[0]:.3f}{degs_ch}{NS}, {floats[1]:.3f}{degs_ch}{EW} | Alt: {floats[2]:.0f} FT"
+            telemetry_group[TLM_POSALT].text = f"  Pos: {floats[0]:.3f}{degs_ch} {NS}, {floats[1]:.3f}{degs_ch} {EW} | Alt: {floats[2]:.0f} FT"
             telemetry_group[TLM_POSALT].hidden = False
         elif active_id == 96:   # COM Frequencies
             telemetry_group[TLM_COMS].text = f"  COM1: {floats[0]/100.0:.2f} | COM2: {floats[3]/100.0:.2f} MHz"
@@ -631,8 +632,9 @@ def fill_telemetry(data_rcvd):
             telemetry_group[TLM_DME].text = f"  NAV1 DME Dist: {floats[3]:.1f} NM | GS: {floats[4]:.0f} Kt"
             telemetry_group[TLM_DME].hidden = False
 
-    telemetry_group[TLM_LINE2].text = "-" * 64 + "\n"
-    telemetry_group[TLM_LINE2].hidden = False
+    if scale == 1:
+        telemetry_group[TLM_LINE2].text = "-" * 44 + "\n"  # was: 64
+        telemetry_group[TLM_LINE2].hidden = False
     
     _unhide_telemetry_group()
 
